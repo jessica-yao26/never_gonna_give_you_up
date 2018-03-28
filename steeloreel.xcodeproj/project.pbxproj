@@ -12,9 +12,10 @@
 		4D3D24C1206AFAC100003275 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3D24C0206AFAC100003275 /* SecondViewController.swift */; };
 		4D3D24C4206AFAC100003275 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D3D24C2206AFAC100003275 /* Main.storyboard */; };
 		4D3D24C6206AFAC100003275 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D3D24C5206AFAC100003275 /* Assets.xcassets */; };
-		4D3D24C9206AFAC100003275 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D3D24C7206AFAC100003275 /* LaunchScreen.storyboard */; };
 		4D3D24D4206AFAC100003275 /* steeloreelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3D24D3206AFAC100003275 /* steeloreelTests.swift */; };
 		4D3D24DF206AFAC100003275 /* steeloreelUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3D24DE206AFAC100003275 /* steeloreelUITests.swift */; };
+		4D3D24ED206B4CC300003275 /* LoginSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3D24EC206B4CC300003275 /* LoginSignUpViewController.swift */; };
+		4D3D24EF206B50E200003275 /* LoginSignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D3D24EE206B50E200003275 /* LoginSignUp.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +42,6 @@
 		4D3D24C0206AFAC100003275 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		4D3D24C3206AFAC100003275 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4D3D24C5206AFAC100003275 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		4D3D24C8206AFAC100003275 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D3D24CA206AFAC100003275 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D3D24CF206AFAC100003275 /* steeloreelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = steeloreelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D3D24D3206AFAC100003275 /* steeloreelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = steeloreelTests.swift; sourceTree = "<group>"; };
@@ -49,6 +49,8 @@
 		4D3D24DA206AFAC100003275 /* steeloreelUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = steeloreelUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D3D24DE206AFAC100003275 /* steeloreelUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = steeloreelUITests.swift; sourceTree = "<group>"; };
 		4D3D24E0206AFAC100003275 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D3D24EC206B4CC300003275 /* LoginSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSignUpViewController.swift; sourceTree = "<group>"; };
+		4D3D24EE206B50E200003275 /* LoginSignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginSignUp.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,8 +106,9 @@
 				4D3D24C0206AFAC100003275 /* SecondViewController.swift */,
 				4D3D24C2206AFAC100003275 /* Main.storyboard */,
 				4D3D24C5206AFAC100003275 /* Assets.xcassets */,
-				4D3D24C7206AFAC100003275 /* LaunchScreen.storyboard */,
 				4D3D24CA206AFAC100003275 /* Info.plist */,
+				4D3D24EC206B4CC300003275 /* LoginSignUpViewController.swift */,
+				4D3D24EE206B50E200003275 /* LoginSignUp.storyboard */,
 			);
 			path = steeloreel;
 			sourceTree = "<group>";
@@ -235,9 +238,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D3D24C9206AFAC100003275 /* LaunchScreen.storyboard in Resources */,
 				4D3D24C6206AFAC100003275 /* Assets.xcassets in Resources */,
 				4D3D24C4206AFAC100003275 /* Main.storyboard in Resources */,
+				4D3D24EF206B50E200003275 /* LoginSignUp.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D3D24ED206B4CC300003275 /* LoginSignUpViewController.swift in Sources */,
 				4D3D24C1206AFAC100003275 /* SecondViewController.swift in Sources */,
 				4D3D24BD206AFAC000003275 /* AppDelegate.swift in Sources */,
 				4D3D24BF206AFAC100003275 /* FirstViewController.swift in Sources */,
@@ -306,14 +310,6 @@
 				4D3D24C3206AFAC100003275 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		4D3D24C7206AFAC100003275 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4D3D24C8206AFAC100003275 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
