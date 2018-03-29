@@ -12,6 +12,7 @@ class LoginSignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        AppUtility.lockOrientation(.landscape, andRotateTo: .portrait)
         AppUtility.lockOrientation(.portrait)
         // Do any additional setup after loading the view.
     }
