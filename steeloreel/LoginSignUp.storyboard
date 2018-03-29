@@ -58,7 +58,7 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tdc-23-DzG">
-                                <rect key="frame" x="16" y="587" width="343" height="30"/>
+                                <rect key="frame" x="16" y="589" width="343" height="30"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -67,11 +67,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="qZR-xv-xkr" firstAttribute="top" secondItem="Tdc-23-DzG" secondAttribute="bottom" id="6TD-zl-kA9"/>
+                            <constraint firstItem="qZR-xv-xkr" firstAttribute="centerY" secondItem="grr-pn-7gb" secondAttribute="centerY" constant="298.5" id="3Cb-Vu-e9c"/>
+                            <constraint firstItem="qZR-xv-xkr" firstAttribute="top" secondItem="Tdc-23-DzG" secondAttribute="bottom" constant="-2" id="6TD-zl-kA9"/>
                             <constraint firstItem="Tdc-23-DzG" firstAttribute="centerX" secondItem="grr-pn-7gb" secondAttribute="centerX" id="CVG-Jh-McI"/>
                             <constraint firstItem="qZR-xv-xkr" firstAttribute="height" secondItem="Tdc-23-DzG" secondAttribute="height" id="Coc-e1-ghF"/>
                             <constraint firstItem="qZR-xv-xkr" firstAttribute="centerX" secondItem="grr-pn-7gb" secondAttribute="centerX" id="Ta2-Gi-Xf5"/>
-                            <constraint firstItem="Tdc-23-DzG" firstAttribute="top" secondItem="wmW-w4-osy" secondAttribute="bottom" constant="341" id="Xr6-nI-zXy"/>
                             <constraint firstItem="qZR-xv-xkr" firstAttribute="width" secondItem="Tdc-23-DzG" secondAttribute="width" id="gM9-FD-FPv"/>
                             <constraint firstItem="qZR-xv-xkr" firstAttribute="leading" secondItem="FmM-vD-VAU" secondAttribute="leading" constant="16" id="mJR-Hw-Oc3"/>
                             <constraint firstItem="wmW-w4-osy" firstAttribute="centerX" secondItem="grr-pn-7gb" secondAttribute="centerX" id="nkF-f3-lPi"/>

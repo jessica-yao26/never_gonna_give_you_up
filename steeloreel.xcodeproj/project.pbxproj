@@ -17,6 +17,7 @@
 		4D3D24ED206B4CC300003275 /* LoginSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3D24EC206B4CC300003275 /* LoginSignUpViewController.swift */; };
 		4D3D24EF206B50E200003275 /* LoginSignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D3D24EE206B50E200003275 /* LoginSignUp.storyboard */; };
 		4D3D24F4206C96DA00003275 /* AppUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3D24F3206C96DA00003275 /* AppUtility.swift */; };
+		4D3D24FE206CAAA800003275 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D3D24FD206CAAA800003275 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		4D3D24EC206B4CC300003275 /* LoginSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSignUpViewController.swift; sourceTree = "<group>"; };
 		4D3D24EE206B50E200003275 /* LoginSignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginSignUp.storyboard; sourceTree = "<group>"; };
 		4D3D24F3206C96DA00003275 /* AppUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUtility.swift; sourceTree = "<group>"; };
+		4D3D24FD206CAAA800003275 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				4D3D24EC206B4CC300003275 /* LoginSignUpViewController.swift */,
 				4D3D24EE206B50E200003275 /* LoginSignUp.storyboard */,
 				4D3D24F3206C96DA00003275 /* AppUtility.swift */,
+				4D3D24FD206CAAA800003275 /* LaunchScreen.storyboard */,
 			);
 			path = steeloreel;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D3D24C6206AFAC100003275 /* Assets.xcassets in Resources */,
+				4D3D24FE206CAAA800003275 /* LaunchScreen.storyboard in Resources */,
 				4D3D24C4206AFAC100003275 /* Main.storyboard in Resources */,
 				4D3D24EF206B50E200003275 /* LoginSignUp.storyboard in Resources */,
 			);
