@@ -14,19 +14,16 @@ class LoginSignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Change and lock orientation to portrait
-        AppUtility.lockOrientation(.landscape, andRotateTo: .portrait)
-        AppUtility.lockOrientation(.portrait)
-        // Set and scale background image
-        let image = AppUtility.scaleUIImageToSize(image: UIImage(named: "pattern")!, size: CGSize(width: 175, height: 175))
-        self.view.backgroundColor = UIColor(patternImage: image)
+        AppUtility.setupView(view: self.view)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    // Helpers
     
+    // Email validators
     func isValidEmail(testStr:String) -> Bool {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
         
@@ -44,6 +41,38 @@ class LoginSignUpViewController: UIViewController {
             self.showToast(message: "Please enter a valid email")
         }
     }
+    
+    // Database call
+    func lookupEmail(email:String){
+        var request = URLRequest(url: URL(string:"http://127.0.0.1:8000/users/")!);
+        request.httpMethod = "GET";
+        let json = ["email":email];
+        let jsonData =  try? JSONSerialization.data(withJSONObject: json);
+        request.httpBody = jsonData;
+        request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type");
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            guard let data = data, error == nil else {
+                // check for a networking error
+                print("error=\(String(describing: error))")
+                self.showToast(message: "Sorry, something went wrong")
+                return
+            }
+            
+            if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200 {
+                // check for http errors
+                print("statusCode should be 200, but is \(httpStatus.statusCode)")
+                print("response = \(String(describing: response))")
+                
+            }
+            
+            let responseString = String(data: data, encoding: .utf8)
+            print("responseString = \(String(describing: responseString))")
+        }
+        task.resume()
+        // parse response logic
+    }
+    
+    // Actions
     
     @IBAction func continueButtonPressed(_ sender: Any) {
         print("inside CBP")
