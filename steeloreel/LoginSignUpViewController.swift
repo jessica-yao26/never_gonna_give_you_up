@@ -12,8 +12,10 @@ class LoginSignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Change and lock orientation to portrait
         AppUtility.lockOrientation(.landscape, andRotateTo: .portrait)
         AppUtility.lockOrientation(.portrait)
+        // Set and scale background image
         let image = AppUtility.scaleUIImageToSize(image: UIImage(named: "pattern")!, size: CGSize(width: 175, height: 175))
         self.view.backgroundColor = UIColor(patternImage: image)
     }
