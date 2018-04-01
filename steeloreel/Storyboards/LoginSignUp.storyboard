@@ -62,6 +62,7 @@
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <action selector="continueButtonPressed:" destination="NGn-jW-Kn2" eventType="editingDidEnd" id="Gyj-w4-5Eh"/>
+                                    <action selector="returnKeyPressed:" destination="NGn-jW-Kn2" eventType="primaryActionTriggered" id="u7o-uF-Sqg"/>
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stylo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wmW-w4-osy">

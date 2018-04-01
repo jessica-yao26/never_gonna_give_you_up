@@ -27,13 +27,35 @@ class LoginSignUpViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func continueButtonPressed(_ sender: Any) {
-        print("inside CBP")
+    func isValidEmail(testStr:String) -> Bool {
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        
+        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        return emailTest.evaluate(with: testStr)
+    }
+    
+    func checkEmailFieldValid() {
         if(emailField.text?.isEmpty)! {
             print("email field is empty")
-            self.showToast(message:"Please Email field")
+            self.showToast(message: "Please enter your email")
+        }
+        else if(!isValidEmail(testStr: emailField.text!)){
+            print("email field is invalid")
+            self.showToast(message: "Please enter a valid email")
         }
     }
+    
+    @IBAction func continueButtonPressed(_ sender: Any) {
+        print("inside CBP")
+        checkEmailFieldValid()
+    }
+    
+    
+    @IBAction func returnKeyPressed(_ sender: Any) {
+        print("return pressed")
+        checkEmailFieldValid()
+    }
+    
     /*
     // MARK: - Navigation
 
