@@ -47,6 +47,9 @@
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="continueButtonPressed:" destination="NGn-jW-Kn2" eventType="touchUpInside" id="HMB-ct-8xm"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tdc-23-DzG">
                                 <rect key="frame" x="16" y="587" width="343" height="30"/>
@@ -57,6 +60,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="continueButtonPressed:" destination="NGn-jW-Kn2" eventType="editingDidEnd" id="Gyj-w4-5Eh"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stylo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wmW-w4-osy">
                                 <rect key="frame" x="153" y="136" width="68" height="68"/>
@@ -87,6 +93,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="FmM-vD-VAU"/>
                     </view>
+                    <connections>
+                        <outlet property="emailField" destination="Tdc-23-DzG" id="g5z-A2-cjp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jZc-cb-xxw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

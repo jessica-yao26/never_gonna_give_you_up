@@ -19,6 +19,7 @@
 		4D3D24F4206C96DA00003275 /* AppUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3D24F3206C96DA00003275 /* AppUtility.swift */; };
 		4D3D24FE206CAAA800003275 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D3D24FD206CAAA800003275 /* LaunchScreen.storyboard */; };
 		4D3D25002070922900003275 /* KeyboardLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3D24FF2070922900003275 /* KeyboardLayoutConstraint.swift */; };
+		4DF8A2D12071659C00F44A09 /* UIViewController+Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF8A2D02071659C00F44A09 /* UIViewController+Toast.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		4D3D24F3206C96DA00003275 /* AppUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUtility.swift; sourceTree = "<group>"; };
 		4D3D24FD206CAAA800003275 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D3D24FF2070922900003275 /* KeyboardLayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardLayoutConstraint.swift; sourceTree = "<group>"; };
+		4DF8A2D02071659C00F44A09 /* UIViewController+Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Toast.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,17 +109,13 @@
 		4D3D24BB206AFAC000003275 /* steeloreel */ = {
 			isa = PBXGroup;
 			children = (
+				4DF8A2D4207166B500F44A09 /* Storyboards */,
+				4DF8A2D32071669D00F44A09 /* Controllers */,
+				4DF8A2D22071664700F44A09 /* Utilities */,
+				4DF8A2CF2071653C00F44A09 /* Extensions */,
 				4D3D24BC206AFAC000003275 /* AppDelegate.swift */,
-				4D3D24BE206AFAC100003275 /* FirstViewController.swift */,
-				4D3D24C0206AFAC100003275 /* SecondViewController.swift */,
-				4D3D24C2206AFAC100003275 /* Main.storyboard */,
 				4D3D24C5206AFAC100003275 /* Assets.xcassets */,
 				4D3D24CA206AFAC100003275 /* Info.plist */,
-				4D3D24EC206B4CC300003275 /* LoginSignUpViewController.swift */,
-				4D3D24EE206B50E200003275 /* LoginSignUp.storyboard */,
-				4D3D24F3206C96DA00003275 /* AppUtility.swift */,
-				4D3D24FD206CAAA800003275 /* LaunchScreen.storyboard */,
-				4D3D24FF2070922900003275 /* KeyboardLayoutConstraint.swift */,
 			);
 			path = steeloreel;
 			sourceTree = "<group>";
@@ -138,6 +136,43 @@
 				4D3D24E0206AFAC100003275 /* Info.plist */,
 			);
 			path = steeloreelUITests;
+			sourceTree = "<group>";
+		};
+		4DF8A2CF2071653C00F44A09 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4DF8A2D02071659C00F44A09 /* UIViewController+Toast.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4DF8A2D22071664700F44A09 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				4D3D24FF2070922900003275 /* KeyboardLayoutConstraint.swift */,
+				4D3D24F3206C96DA00003275 /* AppUtility.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		4DF8A2D32071669D00F44A09 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4D3D24EC206B4CC300003275 /* LoginSignUpViewController.swift */,
+				4D3D24BE206AFAC100003275 /* FirstViewController.swift */,
+				4D3D24C0206AFAC100003275 /* SecondViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		4DF8A2D4207166B500F44A09 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				4D3D24FD206CAAA800003275 /* LaunchScreen.storyboard */,
+				4D3D24EE206B50E200003275 /* LoginSignUp.storyboard */,
+				4D3D24C2206AFAC100003275 /* Main.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,6 +313,7 @@
 				4D3D24ED206B4CC300003275 /* LoginSignUpViewController.swift in Sources */,
 				4D3D24C1206AFAC100003275 /* SecondViewController.swift in Sources */,
 				4D3D24F4206C96DA00003275 /* AppUtility.swift in Sources */,
+				4DF8A2D12071659C00F44A09 /* UIViewController+Toast.swift in Sources */,
 				4D3D24BD206AFAC000003275 /* AppDelegate.swift in Sources */,
 				4D3D24BF206AFAC100003275 /* FirstViewController.swift in Sources */,
 				4D3D25002070922900003275 /* KeyboardLayoutConstraint.swift in Sources */,

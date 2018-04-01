@@ -10,6 +10,8 @@ import UIKit
 
 class LoginSignUpViewController: UIViewController {
     
+    @IBOutlet weak var emailField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Change and lock orientation to portrait
@@ -24,7 +26,14 @@ class LoginSignUpViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    @IBAction func continueButtonPressed(_ sender: Any) {
+        print("inside CBP")
+        if(emailField.text?.isEmpty)! {
+            print("email field is empty")
+            self.showToast(message:"Please Email field")
+        }
+    }
     /*
     // MARK: - Navigation
 
