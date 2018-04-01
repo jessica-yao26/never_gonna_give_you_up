@@ -14,7 +14,8 @@ class LoginSignUpViewController: UIViewController {
         super.viewDidLoad()
         AppUtility.lockOrientation(.landscape, andRotateTo: .portrait)
         AppUtility.lockOrientation(.portrait)
-        // Do any additional setup after loading the view.
+        let image = AppUtility.scaleUIImageToSize(image: UIImage(named: "pattern")!, size: CGSize(width: 175, height: 175))
+        self.view.backgroundColor = UIColor(patternImage: image)
     }
 
     override func didReceiveMemoryWarning() {

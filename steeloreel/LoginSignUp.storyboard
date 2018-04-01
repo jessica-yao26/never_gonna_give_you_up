@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stylo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wmW-w4-osy">
-                                <rect key="frame" x="153" y="178" width="68" height="68"/>
+                                <rect key="frame" x="153" y="455" width="68" height="68"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="68" id="UVw-1k-YcL"/>
@@ -77,13 +77,13 @@
                             <constraint firstItem="FmM-vD-VAU" firstAttribute="bottom" secondItem="qZR-xv-xkr" secondAttribute="bottom" constant="20" id="AwT-CC-sJF" customClass="KeyboardLayoutConstraint" customModule="steeloreel" customModuleProvider="target"/>
                             <constraint firstItem="Tdc-23-DzG" firstAttribute="centerX" secondItem="grr-pn-7gb" secondAttribute="centerX" id="CVG-Jh-McI"/>
                             <constraint firstItem="qZR-xv-xkr" firstAttribute="height" secondItem="Tdc-23-DzG" secondAttribute="height" id="Coc-e1-ghF"/>
+                            <constraint firstItem="Tdc-23-DzG" firstAttribute="top" secondItem="wmW-w4-osy" secondAttribute="bottom" constant="64" id="LpN-iq-RpO"/>
                             <constraint firstItem="qZR-xv-xkr" firstAttribute="centerX" secondItem="grr-pn-7gb" secondAttribute="centerX" id="Ta2-Gi-Xf5"/>
                             <constraint firstItem="qZR-xv-xkr" firstAttribute="width" secondItem="Tdc-23-DzG" secondAttribute="width" id="gM9-FD-FPv"/>
                             <constraint firstItem="qZR-xv-xkr" firstAttribute="leading" secondItem="FmM-vD-VAU" secondAttribute="leading" constant="16" id="mJR-Hw-Oc3"/>
                             <constraint firstItem="wmW-w4-osy" firstAttribute="centerX" secondItem="grr-pn-7gb" secondAttribute="centerX" id="nkF-f3-lPi"/>
                             <constraint firstItem="qZR-xv-xkr" firstAttribute="centerX" secondItem="grr-pn-7gb" secondAttribute="centerX" id="ozi-ax-sSF"/>
                             <constraint firstItem="Tdc-23-DzG" firstAttribute="leading" secondItem="qZR-xv-xkr" secondAttribute="leading" id="uLE-a5-7fU"/>
-                            <constraint firstItem="wmW-w4-osy" firstAttribute="top" secondItem="FmM-vD-VAU" secondAttribute="top" constant="158" id="wDY-z6-mZB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="FmM-vD-VAU"/>
                     </view>

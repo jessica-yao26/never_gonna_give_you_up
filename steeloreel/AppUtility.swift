@@ -26,4 +26,16 @@ struct AppUtility {
         UIDevice.current.setValue(rotateOrientation.rawValue, forKey: "orientation")
     }
     
+    static func scaleUIImageToSize(image: UIImage, size: CGSize) -> UIImage {
+        let hasAlpha = false
+        let scale: CGFloat = 0.0 // Automatically use scale factor of main screen
+        
+        UIGraphicsBeginImageContextWithOptions(size, !hasAlpha, scale)
+        image.draw(in: CGRect(origin: CGPoint(x: 0,y :0), size: size))
+        
+        let scaledImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return scaledImage!
+    }
 }
