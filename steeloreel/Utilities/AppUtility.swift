@@ -39,12 +39,20 @@ struct AppUtility {
         return scaledImage!
     }
     
-    static func setupView(view: UIView) {
+    // Helpers composed of utility methods
+    
+    static func setupLandingView(view: UIView) {
         // Change and lock orientation to portrait
         lockOrientation(.landscape, andRotateTo: .portrait)
         lockOrientation(.portrait)
         // Set and scale background image
         let image = scaleUIImageToSize(image: UIImage(named: "pattern")!, size: CGSize(width: 175, height: 175))
         view.backgroundColor = UIColor(patternImage: image)
+    }
+    
+    static func setupView(view: UIView) {
+        // Change and lock orientation to portrait
+        lockOrientation(.landscape, andRotateTo: .portrait)
+        lockOrientation(.portrait)
     }
 }

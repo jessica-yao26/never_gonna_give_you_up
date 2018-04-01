@@ -14,7 +14,7 @@ class LoginSignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        AppUtility.setupView(view: self.view)
+        AppUtility.setupLandingView(view: self.view)
     }
 
     override func didReceiveMemoryWarning() {
