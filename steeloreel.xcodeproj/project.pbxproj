@@ -18,6 +18,7 @@
 		4D3D24EF206B50E200003275 /* LoginSignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D3D24EE206B50E200003275 /* LoginSignUp.storyboard */; };
 		4D3D24F4206C96DA00003275 /* AppUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3D24F3206C96DA00003275 /* AppUtility.swift */; };
 		4D3D24FE206CAAA800003275 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D3D24FD206CAAA800003275 /* LaunchScreen.storyboard */; };
+		4D3D25002070922900003275 /* KeyboardLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3D24FF2070922900003275 /* KeyboardLayoutConstraint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		4D3D24EE206B50E200003275 /* LoginSignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginSignUp.storyboard; sourceTree = "<group>"; };
 		4D3D24F3206C96DA00003275 /* AppUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUtility.swift; sourceTree = "<group>"; };
 		4D3D24FD206CAAA800003275 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4D3D24FF2070922900003275 /* KeyboardLayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardLayoutConstraint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				4D3D24EE206B50E200003275 /* LoginSignUp.storyboard */,
 				4D3D24F3206C96DA00003275 /* AppUtility.swift */,
 				4D3D24FD206CAAA800003275 /* LaunchScreen.storyboard */,
+				4D3D24FF2070922900003275 /* KeyboardLayoutConstraint.swift */,
 			);
 			path = steeloreel;
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 				4D3D24F4206C96DA00003275 /* AppUtility.swift in Sources */,
 				4D3D24BD206AFAC000003275 /* AppDelegate.swift in Sources */,
 				4D3D24BF206AFAC100003275 /* FirstViewController.swift in Sources */,
+				4D3D25002070922900003275 /* KeyboardLayoutConstraint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
