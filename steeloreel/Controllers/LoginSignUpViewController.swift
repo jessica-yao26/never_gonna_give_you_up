@@ -14,16 +14,14 @@ class LoginSignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //DispatchQueue.main.async() {
-            AppUtility.setupLandingView(view: self.view)
-        //}
+        AppUtility.setupLandingView(view: self.view)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    // Helpers
+    // Helper functions
     
     // Email validators
     func isValidEmail(testStr:String) -> Bool {
@@ -47,25 +45,11 @@ class LoginSignUpViewController: UIViewController {
         return true;
     }
     
-    // Actions
-    
-    @IBAction func continueButtonPressed(_ sender: Any) {
-        print("inside CBP")
-        checkEmail(email: self.emailField.text!);
-    }
-    
-    @IBAction func returnKeyPressed(_ sender: Any) {
-        print("return pressed")
-        checkEmail(email: self.emailField.text!);
-    }
-    
     func checkEmail(email: String) {
         emailField.resignFirstResponder()
-
+        
         if(isEmailFieldValid()) {
             let statusCode = UserLoginSignUpAPI.checkEmail(email: self.emailField.text!)
-            print("status code:")
-            print(statusCode)
             
             if(statusCode == 404) {
                 self.showToast(message: "new email")
@@ -79,6 +63,17 @@ class LoginSignUpViewController: UIViewController {
         }
     }
     
+    // Actions
+    
+    @IBAction func continueButtonPressed(_ sender: Any) {
+        print("inside CBP")
+        checkEmail(email: self.emailField.text!);
+    }
+    
+    @IBAction func returnKeyPressed(_ sender: Any) {
+        print("return pressed")
+        checkEmail(email: self.emailField.text!);
+    }
     
     /*
     // MARK: - Navigation
