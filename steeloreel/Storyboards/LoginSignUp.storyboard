@@ -61,7 +61,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="continueButtonPressed:" destination="NGn-jW-Kn2" eventType="editingDidEnd" id="Gyj-w4-5Eh"/>
                                     <action selector="returnKeyPressed:" destination="NGn-jW-Kn2" eventType="primaryActionTriggered" id="u7o-uF-Sqg"/>
                                 </connections>
                             </textField>

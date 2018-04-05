@@ -14,7 +14,6 @@ class LoginSignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        UserLoginSignUp.isEmailAlreadyRegistered(email: "<#T##UserLoginSignUp#>");
         //DispatchQueue.main.async() {
             AppUtility.setupLandingView(view: self.view)
         //}
@@ -29,8 +28,8 @@ class LoginSignUpViewController: UIViewController {
     // Email validators
     func isValidEmail(testStr:String) -> Bool {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-        
         let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        
         return emailTest.evaluate(with: testStr)
     }
     
@@ -48,72 +47,38 @@ class LoginSignUpViewController: UIViewController {
         return true;
     }
     
-    // Database call
-    func isEmailAlreadyRegistered(email:String) -> Bool{
-        var request = URLRequest(url: URL(string:"http://127.0.0.1:8000/user-lookup-email")!);
-        request.httpMethod = "GET";
-        let json = ["email":email];
-        let jsonData =  try? JSONSerialization.data(withJSONObject: json);
-        request.httpBody = jsonData;
-        request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type");
-        var emailFound = false;
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            guard let data = data, error == nil else {
-                // check for a networking error
-                print("error=\(String(describing: error))")
-                self.showToast(message: "Sorry, something went wrong")
-                return
-            }
-            
-//            let httpStatus = response as? HTTPURLResponse
-//            if(httpStatus?.statusCode == 200){
-//                emailFound = true;
-//            }
-//            if(httpStatus?.statusCode == 404){
-//               emailFound = false;
-//            }
-            if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200 {
-                // check for http errors
-                print("statusCode should be 200, but is \(httpStatus.statusCode)")
-                print("response = \(String(describing: response))")
-
-            }
-            let responseString = String(data: data, encoding: .utf8)
-            print("responseString = \(String(describing: responseString))")
-        }
-        task.resume()
-        return emailFound;
-    }
-    
     // Actions
     
     @IBAction func continueButtonPressed(_ sender: Any) {
         print("inside CBP")
-        emailField.resignFirstResponder()
-        if(isEmailFieldValid()) {
-//            DispatchQueue.main.async() {
-            if(self.isEmailAlreadyRegistered(email: self.emailField.text!)){
-                showToast(message: "old email")
-            } else {
-                showToast(message: "new email")
-            }
-//            }
-        }
+        checkEmail(email: self.emailField.text!);
     }
     
     @IBAction func returnKeyPressed(_ sender: Any) {
         print("return pressed")
+        checkEmail(email: self.emailField.text!);
+    }
+    
+    func checkEmail(email: String) {
         emailField.resignFirstResponder()
+
         if(isEmailFieldValid()) {
-            //            DispatchQueue.main.async() {
-            if(self.isEmailAlreadyRegistered(email: self.emailField.text!)){
-                showToast(message: "old email")
-            } else {
-                showToast(message: "new email")
+            let statusCode = UserLoginSignUpAPI.checkEmail(email: self.emailField.text!)
+            print("status code:")
+            print(statusCode)
+            
+            if(statusCode == 404) {
+                self.showToast(message: "new email")
             }
-            //            }
+            else if(statusCode == 200) {
+                self.showToast(message: "old email")
+            }
+            else {
+                self.showToast(message: "Sorry, something went wrong")
+            }
         }
     }
+    
     
     /*
     // MARK: - Navigation
