@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		4D104D1B2074856D0057D308 /* StyloURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D104D1A2074856D0057D308 /* StyloURL.swift */; };
 		4D104D1D207486690057D308 /* UserLoginSignUpAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D104D1C207486690057D308 /* UserLoginSignUpAPI.swift */; };
+		4D104D1F2079CF090057D308 /* EnterPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D104D1E2079CF090057D308 /* EnterPasswordViewController.swift */; };
+		4D104D212079D0160057D308 /* SetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D104D202079D0160057D308 /* SetPasswordViewController.swift */; };
 		4D3D24BD206AFAC000003275 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3D24BC206AFAC000003275 /* AppDelegate.swift */; };
 		4D3D24BF206AFAC100003275 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3D24BE206AFAC100003275 /* FirstViewController.swift */; };
 		4D3D24C1206AFAC100003275 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3D24C0206AFAC100003275 /* SecondViewController.swift */; };
@@ -44,6 +46,8 @@
 /* Begin PBXFileReference section */
 		4D104D1A2074856D0057D308 /* StyloURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyloURL.swift; sourceTree = "<group>"; };
 		4D104D1C207486690057D308 /* UserLoginSignUpAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginSignUpAPI.swift; sourceTree = "<group>"; };
+		4D104D1E2079CF090057D308 /* EnterPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterPasswordViewController.swift; sourceTree = "<group>"; };
+		4D104D202079D0160057D308 /* SetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPasswordViewController.swift; sourceTree = "<group>"; };
 		4D3D24B9206AFAC000003275 /* steeloreel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = steeloreel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D3D24BC206AFAC000003275 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D3D24BE206AFAC100003275 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -175,6 +179,8 @@
 				4D3D24EC206B4CC300003275 /* LoginSignUpViewController.swift */,
 				4D3D24BE206AFAC100003275 /* FirstViewController.swift */,
 				4D3D24C0206AFAC100003275 /* SecondViewController.swift */,
+				4D104D1E2079CF090057D308 /* EnterPasswordViewController.swift */,
+				4D104D202079D0160057D308 /* SetPasswordViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -331,7 +337,9 @@
 				4D3D24BD206AFAC000003275 /* AppDelegate.swift in Sources */,
 				4D104D1D207486690057D308 /* UserLoginSignUpAPI.swift in Sources */,
 				4D3D24BF206AFAC100003275 /* FirstViewController.swift in Sources */,
+				4D104D212079D0160057D308 /* SetPasswordViewController.swift in Sources */,
 				4D104D1B2074856D0057D308 /* StyloURL.swift in Sources */,
+				4D104D1F2079CF090057D308 /* EnterPasswordViewController.swift in Sources */,
 				4D3D25002070922900003275 /* KeyboardLayoutConstraint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

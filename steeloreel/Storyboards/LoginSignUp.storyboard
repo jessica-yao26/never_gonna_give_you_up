@@ -101,5 +101,46 @@
             </objects>
             <point key="canvasLocation" x="200.80000000000001" y="-376.46176911544228"/>
         </scene>
+        <!--Set Password View Controller-->
+        <scene sceneID="cmB-c1-mMj">
+            <objects>
+                <viewController restorationIdentifier="SetPasswordViewController" storyboardIdentifier="SetPasswordViewController" title="Set Password View Controller" id="zfy-JU-2p4" customClass="SetPasswordViewController" customModule="steeloreel" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gH7-E9-3G5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="set" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pdX-2G-SYF">
+                                <rect key="frame" x="156" y="246" width="24" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <accessibility key="accessibilityConfiguration" identifier="SetPasswordViewController"/>
+                        <viewLayoutGuide key="safeArea" id="NdJ-xC-eGj"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vQn-dm-c7j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="902" y="-12"/>
+        </scene>
+        <!--Enter Password View Controller-->
+        <scene sceneID="7TR-Jg-Hll">
+            <objects>
+                <viewController title="Enter Password View Controller" id="Wmj-TT-Zdt" customClass="EnterPasswordViewController" customModule="steeloreel" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uAU-Cc-MrB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <accessibility key="accessibilityConfiguration" identifier="EnterPasswordViewController"/>
+                        <viewLayoutGuide key="safeArea" id="r5g-RL-SVp"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Iyx-bd-chl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="902" y="-697"/>
+        </scene>
     </scenes>
 </document>

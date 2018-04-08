@@ -33,12 +33,10 @@ class LoginSignUpViewController: UIViewController {
     
     func isEmailFieldValid() -> Bool {
         if(emailField.text?.isEmpty)! {
-            print("email field is empty")
             self.showToast(message: "Please enter your email")
             return false;
         }
         if(!isValidEmail(testStr: emailField.text!)){
-            print("email field is invalid")
             self.showToast(message: "Please enter a valid email")
             return false;
         }
@@ -47,17 +45,19 @@ class LoginSignUpViewController: UIViewController {
     // Email checker
     func checkEmail(email: String) {
         emailField.resignFirstResponder()
-        
+
         if(isEmailFieldValid()) {
-            
+
             UserLoginSignUpAPI.checkEmail(email: email, completion: { response in
                 let statusCode = response
                 DispatchQueue.main.async {
                     if(statusCode == 404) {
-                        self.showToast(message: "new email")
+                        let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "SetPasswordViewController") as! SetPasswordViewController
+                        self.present(nextViewController, animated: true, completion: nil)
                     }
                     else if(statusCode == 200) {
-                        self.showToast(message: "old email")
+                        let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "EnterPasswordViewController") as! EnterPasswordViewController
+                        self.present(nextViewController, animated: true, completion: nil)
                     }
                     else {
                         self.showToast(message: "Sorry, something went wrong")

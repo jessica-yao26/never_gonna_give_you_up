@@ -12,7 +12,6 @@ struct UserLoginSignUpAPI {
     
     static func checkEmail(email: String, completion : @escaping (Int) -> Void) {
         let URL = StyloURL.checkEmailURL();
-        print(URL);
         var request = URLRequest(url: URL);
         request.httpMethod = "GET";
         let json = ["email": email];
@@ -27,7 +26,7 @@ struct UserLoginSignUpAPI {
             if let httpStatus = response as? HTTPURLResponse {
                 completion(httpStatus.statusCode)
             }
-            return;
+            return
         })
         task.resume()
     }
