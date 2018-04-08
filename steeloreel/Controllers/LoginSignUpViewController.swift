@@ -44,34 +44,36 @@ class LoginSignUpViewController: UIViewController {
         }
         return true;
     }
-    
+    // Email checker
     func checkEmail(email: String) {
         emailField.resignFirstResponder()
         
         if(isEmailFieldValid()) {
-            let statusCode = UserLoginSignUpAPI.checkEmail(email: self.emailField.text!)
             
-            if(statusCode == 404) {
-                self.showToast(message: "new email")
-            }
-            else if(statusCode == 200) {
-                self.showToast(message: "old email")
-            }
-            else {
-                self.showToast(message: "Sorry, something went wrong")
-            }
+            UserLoginSignUpAPI.checkEmail(email: email, completion: { response in
+                let statusCode = response
+                DispatchQueue.main.async {
+                    if(statusCode == 404) {
+                        self.showToast(message: "new email")
+                    }
+                    else if(statusCode == 200) {
+                        self.showToast(message: "old email")
+                    }
+                    else {
+                        self.showToast(message: "Sorry, something went wrong")
+                    }
+                }
+            })
         }
     }
     
     // Actions
     
     @IBAction func continueButtonPressed(_ sender: Any) {
-        print("inside CBP")
         checkEmail(email: self.emailField.text!);
     }
     
     @IBAction func returnKeyPressed(_ sender: Any) {
-        print("return pressed")
         checkEmail(email: self.emailField.text!);
     }
     

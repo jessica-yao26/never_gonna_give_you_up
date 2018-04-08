@@ -10,7 +10,7 @@ import Foundation
 
 struct UserLoginSignUpAPI {
     
-    static func checkEmail(email: String) -> Int{
+    static func checkEmail(email: String, completion : @escaping (Int) -> Void) {
         let URL = StyloURL.checkEmailURL();
         print(URL);
         var request = URLRequest(url: URL);
@@ -19,23 +19,17 @@ struct UserLoginSignUpAPI {
         let jsonData =  try? JSONSerialization.data(withJSONObject: json);
         request.httpBody = jsonData;
         request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type");
-        var statusCode = 0;
-            let task = URLSession.shared.dataTask(with: request) {
-                data, response, error in guard let data = data, error == nil else {
-                    // check for a networking error
-                    print("error=\(String(describing: error))")
-                    return;
-                }
-        
-                let httpStatus = response as? HTTPURLResponse
-                statusCode = (httpStatus?.statusCode)!
-                print(httpStatus)
-        
-                let responseString = String(data: data, encoding: .utf8)
-                print("responseString = \(String(describing: responseString))")
+        let task = URLSession.shared.dataTask(with: request, completionHandler: {
+            data, response, error in guard error == nil else {
+                completion(-1)
+                return
             }
-            task.resume()
-        
-        return statusCode;
+            if let httpStatus = response as? HTTPURLResponse {
+                completion(httpStatus.statusCode)
+            }
+            return;
+        })
+        task.resume()
     }
+    
 }
