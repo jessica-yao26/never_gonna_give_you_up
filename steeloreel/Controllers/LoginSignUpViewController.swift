@@ -52,7 +52,7 @@ class LoginSignUpViewController: UIViewController {
                 let statusCode = response
                 DispatchQueue.main.async {
                     if(statusCode == 404) {
-                        let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "SetPasswordViewController") as! SetPasswordViewController
+                        let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "NameViewController") as! NameViewController
                         self.present(nextViewController, animated: true, completion: nil)
                     }
                     else if(statusCode == 200) {
