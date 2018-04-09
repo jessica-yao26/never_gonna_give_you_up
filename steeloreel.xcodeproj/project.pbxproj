@@ -13,6 +13,7 @@
 		4D104D212079D0160057D308 /* SetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D104D202079D0160057D308 /* SetPasswordViewController.swift */; };
 		4D104D23207B0D790057D308 /* NameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D104D22207B0D790057D308 /* NameViewController.swift */; };
 		4D104D25207B21A20057D308 /* UITextField+BottomBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D104D24207B21A20057D308 /* UITextField+BottomBorder.swift */; };
+		4D104D29207B2C050057D308 /* ChooseUsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D104D28207B2C050057D308 /* ChooseUsernameViewController.swift */; };
 		4D3D24BD206AFAC000003275 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3D24BC206AFAC000003275 /* AppDelegate.swift */; };
 		4D3D24BF206AFAC100003275 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3D24BE206AFAC100003275 /* FirstViewController.swift */; };
 		4D3D24C1206AFAC100003275 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3D24C0206AFAC100003275 /* SecondViewController.swift */; };
@@ -52,6 +53,7 @@
 		4D104D202079D0160057D308 /* SetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPasswordViewController.swift; sourceTree = "<group>"; };
 		4D104D22207B0D790057D308 /* NameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameViewController.swift; sourceTree = "<group>"; };
 		4D104D24207B21A20057D308 /* UITextField+BottomBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+BottomBorder.swift"; sourceTree = "<group>"; };
+		4D104D28207B2C050057D308 /* ChooseUsernameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseUsernameViewController.swift; sourceTree = "<group>"; };
 		4D3D24B9206AFAC000003275 /* steeloreel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = steeloreel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D3D24BC206AFAC000003275 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D3D24BE206AFAC100003275 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 				4D104D1E2079CF090057D308 /* EnterPasswordViewController.swift */,
 				4D104D202079D0160057D308 /* SetPasswordViewController.swift */,
 				4D104D22207B0D790057D308 /* NameViewController.swift */,
+				4D104D28207B2C050057D308 /* ChooseUsernameViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -341,6 +344,7 @@
 				4D3D24F4206C96DA00003275 /* AppUtility.swift in Sources */,
 				4DF8A2D12071659C00F44A09 /* UIViewController+Toast.swift in Sources */,
 				4D3D24BD206AFAC000003275 /* AppDelegate.swift in Sources */,
+				4D104D29207B2C050057D308 /* ChooseUsernameViewController.swift in Sources */,
 				4D104D1D207486690057D308 /* UserLoginSignUpAPI.swift in Sources */,
 				4D3D24BF206AFAC100003275 /* FirstViewController.swift in Sources */,
 				4D104D25207B21A20057D308 /* UITextField+BottomBorder.swift in Sources */,
