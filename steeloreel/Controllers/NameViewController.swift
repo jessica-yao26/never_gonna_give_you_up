@@ -10,9 +10,20 @@ import UIKit
 
 class NameViewController: UIViewController {
 
+    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var forwardButton: UIButton!
+    
+    @IBOutlet weak var firstNameField: UITextField!
+    @IBOutlet weak var lastNameField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let backImage = UIImage(named: "left-arrow")
+        let forwardImage = UIImage(named: "right-arrow")
+        backButton.setBackgroundImage(backImage, for: .normal)
+        forwardButton.setBackgroundImage(forwardImage, for: .normal)
+        firstNameField.setBottomBorder()
+        lastNameField.setBottomBorder()
         // Do any additional setup after loading the view.
     }
 
@@ -20,7 +31,7 @@ class NameViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+
 
     /*
     // MARK: - Navigation
