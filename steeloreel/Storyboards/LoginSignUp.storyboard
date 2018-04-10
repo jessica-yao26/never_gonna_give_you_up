@@ -115,9 +115,6 @@
                                     <constraint firstAttribute="width" constant="20" id="2Tl-s0-4Xo"/>
                                     <constraint firstAttribute="height" constant="20" id="ePP-HL-wCj"/>
                                 </constraints>
-                                <connections>
-                                    <segue destination="NGn-jW-Kn2" kind="presentation" id="VnW-Ka-1IR"/>
-                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0xF-Xf-lSm">
                                 <rect key="frame" x="16" y="130" width="343" height="30"/>
@@ -261,8 +258,8 @@
                                     <constraint firstAttribute="height" constant="20" id="cyx-HS-XC1"/>
                                 </constraints>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set your password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pdX-2G-SYF">
-                                <rect key="frame" x="44" y="35" width="142" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create an 8+ character password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pdX-2G-SYF">
+                                <rect key="frame" x="44" y="35" width="255" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
