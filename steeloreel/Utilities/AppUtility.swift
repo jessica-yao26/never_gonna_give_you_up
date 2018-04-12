@@ -55,4 +55,37 @@ struct AppUtility {
         lockOrientation(.landscape, andRotateTo: .portrait)
         lockOrientation(.portrait)
     }
+    
+    static func setArrowButtonImages(backButton: UIButton, forwardButton: UIButton) {
+        let backImage = UIImage(named: "left-arrow")
+        let forwardImage = UIImage(named: "right-arrow")
+        backButton.setBackgroundImage(backImage, for: .normal)
+        forwardButton.setBackgroundImage(forwardImage, for: .normal)
+    }
+    
+    static func SegueFromLeftViewControllerHelper(sourceViewController: UIViewController, destinationViewController: UIViewController) {
+            let src = sourceViewController
+            let dst = destinationViewController
+            
+            src.view.superview?.insertSubview(dst.view, aboveSubview: src.view)
+            dst.view.transform = CGAffineTransform(translationX: -src.view.frame.size.width, y: 0)
+            
+            UIView.animate(withDuration: 0.25,
+                           delay: 0.0,
+                           options: .curveEaseInOut,
+                           animations: {
+                            dst.view.transform = CGAffineTransform(translationX: 0, y: 0)
+            },
+                           completion: { finished in
+                            src.present(dst, animated: false, completion: nil)
+            }
+            )
+    }
+    
+    static func clearLoginSignUpUserDefaults() {
+        UserDefaults.standard.removeObject(forKey: "email")
+        UserDefaults.standard.removeObject(forKey: "first_name")
+        UserDefaults.standard.removeObject(forKey: "last_name")
+        UserDefaults.standard.removeObject(forKey: "username")
+    }
 }

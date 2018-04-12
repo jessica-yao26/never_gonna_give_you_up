@@ -9,10 +9,13 @@
 import UIKit
 
 class SetPasswordViewController: UIViewController {
-
+    
+    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var forwardButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        AppUtility.setArrowButtonImages(backButton: backButton, forwardButton: forwardButton)
         // Do any additional setup after loading the view.
     }
 

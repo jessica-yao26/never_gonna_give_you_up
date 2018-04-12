@@ -9,12 +9,15 @@
 import UIKit
 
 class LoginSignUpViewController: UIViewController {
-    
+
     @IBOutlet weak var emailField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         AppUtility.setupLandingView(view: self.view)
+        if(UserDefaults.standard.string(forKey: "email") != nil) {
+            emailField.text = UserDefaults.standard.string(forKey: "email")
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,12 +34,12 @@ class LoginSignUpViewController: UIViewController {
         return emailTest.evaluate(with: testStr)
     }
     
-    func isEmailFieldValid() -> Bool {
-        if(emailField.text?.isEmpty)! {
+    func isEmailFieldValid(email: String) -> Bool {
+        if(email.isEmpty) {
             self.showToast(message: "Please enter your email")
             return false;
         }
-        if(!isValidEmail(testStr: emailField.text!)){
+        if(!isValidEmail(testStr: email)) {
             self.showToast(message: "Please enter a valid email")
             return false;
         }
@@ -45,19 +48,22 @@ class LoginSignUpViewController: UIViewController {
     // Email checker
     func checkEmail(email: String) {
         emailField.resignFirstResponder()
-
-        if(isEmailFieldValid()) {
-
+        if(UserDefaults.standard.string(forKey: "email") != nil && UserDefaults.standard.string(forKey: "email") != emailField.text) {
+            AppUtility.clearLoginSignUpUserDefaults()
+        }
+        if(isEmailFieldValid(email: email)) {
             UserLoginSignUpAPI.checkEmail(email: email, completion: { response in
                 let statusCode = response
                 DispatchQueue.main.async {
                     if(statusCode == 404) {
+                        UserDefaults.standard.set(email, forKey: "email")
                         let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "NameViewController") as! NameViewController
-                        self.present(nextViewController, animated: true, completion: nil)
+                        AppUtility.SegueFromLeftViewControllerHelper(sourceViewController: self, destinationViewController: nextViewController)
                     }
                     else if(statusCode == 200) {
+                        UserDefaults.standard.set(email, forKey: "email")
                         let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "EnterPasswordViewController") as! EnterPasswordViewController
-                        self.present(nextViewController, animated: true, completion: nil)
+                        AppUtility.SegueFromLeftViewControllerHelper(sourceViewController: self, destinationViewController: nextViewController)
                     }
                     else {
                         self.showToast(message: "Sorry, something went wrong")
@@ -70,13 +76,13 @@ class LoginSignUpViewController: UIViewController {
     // Actions
     
     @IBAction func continueButtonPressed(_ sender: Any) {
-        checkEmail(email: self.emailField.text!);
+        checkEmail(email: emailField.text!.trimmingCharacters(in: .whitespacesAndNewlines));
     }
     
     @IBAction func returnKeyPressed(_ sender: Any) {
-        checkEmail(email: self.emailField.text!);
+        checkEmail(email: emailField.text!.trimmingCharacters(in: .whitespacesAndNewlines));
     }
-    
+
     /*
     // MARK: - Navigation
 
