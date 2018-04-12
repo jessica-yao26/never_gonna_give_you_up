@@ -257,7 +257,6 @@
                         <viewLayoutGuide key="safeArea" id="4cI-rA-K1r"/>
                     </view>
                     <connections>
-                        <outlet property="backArrowPressed" destination="sAL-T2-GBd" id="TBT-u7-4Hu"/>
                         <outlet property="backButton" destination="sAL-T2-GBd" id="ULv-EZ-rLh"/>
                         <outlet property="forwardArrowPressed" destination="Vye-07-Dtl" id="gwe-7m-D7i"/>
                         <outlet property="forwardButton" destination="Vye-07-Dtl" id="HC1-lx-tCC"/>
