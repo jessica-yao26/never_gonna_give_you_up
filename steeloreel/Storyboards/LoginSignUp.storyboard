@@ -197,7 +197,7 @@
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <accessibility key="accessibilityConfiguration" identifier="SetPasswordViewController"/>
+                        <accessibility key="accessibilityConfiguration" identifier="NameViewController"/>
                         <constraints>
                             <constraint firstItem="NdJ-xC-eGj" firstAttribute="trailing" secondItem="3XI-So-bYW" secondAttribute="trailing" constant="16" id="6VM-Ex-c9z"/>
                             <constraint firstItem="NdJ-xC-eGj" firstAttribute="bottom" secondItem="t1S-ma-ptn" secondAttribute="bottom" constant="15" id="7WJ-os-J0f" customClass="KeyboardLayoutConstraint" customModule="steeloreel" customModuleProvider="target"/>
@@ -206,7 +206,9 @@
                             <constraint firstItem="jcg-la-DaG" firstAttribute="leading" secondItem="4cb-gw-jm4" secondAttribute="trailing" constant="12" id="D1m-aa-rJ8"/>
                             <constraint firstItem="4cb-gw-jm4" firstAttribute="leading" secondItem="gH7-E9-3G5" secondAttribute="leadingMargin" id="IBw-ij-fye"/>
                             <constraint firstItem="3XI-So-bYW" firstAttribute="top" secondItem="jcg-la-DaG" secondAttribute="bottom" constant="24" id="Nla-zd-3ty"/>
+                            <constraint firstItem="3XI-So-bYW" firstAttribute="leading" secondItem="NdJ-xC-eGj" secondAttribute="leading" constant="16" id="U1L-z1-rQt"/>
                             <constraint firstItem="4cb-gw-jm4" firstAttribute="top" secondItem="NdJ-xC-eGj" secondAttribute="top" constant="15" id="fMr-Nc-Zu3"/>
+                            <constraint firstItem="NdJ-xC-eGj" firstAttribute="trailing" secondItem="3XI-So-bYW" secondAttribute="trailing" constant="16" id="muX-Mf-mnR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="NdJ-xC-eGj"/>
                     </view>
