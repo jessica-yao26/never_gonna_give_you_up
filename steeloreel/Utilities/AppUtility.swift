@@ -86,6 +86,5 @@ struct AppUtility {
         UserDefaults.standard.removeObject(forKey: "email")
         UserDefaults.standard.removeObject(forKey: "first_name")
         UserDefaults.standard.removeObject(forKey: "last_name")
-        UserDefaults.standard.removeObject(forKey: "username")
     }
 }

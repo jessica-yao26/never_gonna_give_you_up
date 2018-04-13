@@ -9,7 +9,8 @@
 import Foundation
 
 enum Method: String {
-    case checkUserEmailExists = "/user-lookup-email"
+    case checkUserEmailExists = "/user-lookup-email/"
+    case createNewUser = "/users/"
 }
 
 struct StyloURL {
@@ -47,5 +48,8 @@ struct StyloURL {
     static func checkEmailURL() -> URL {
         return styloURL(method: .checkUserEmailExists)
     }
-
+    
+    static func createNewUser() -> URL {
+        return styloURL(method: .createNewUser)
+    }
 }

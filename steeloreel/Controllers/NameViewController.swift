@@ -15,17 +15,31 @@ class NameViewController: UIViewController {
     
     @IBOutlet weak var firstNameField: UITextField!
     @IBOutlet weak var lastNameField: UITextField!
+    @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var usernameField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         AppUtility.setArrowButtonImages(backButton: backButton, forwardButton: forwardButton)
         firstNameField.setBottomBorder()
         lastNameField.setBottomBorder()
+        passwordField.setBottomBorder()
+        usernameField.setBottomBorder()
         if(UserDefaults.standard.string(forKey: "first_name") != nil) {
             firstNameField.text = UserDefaults.standard.string(forKey: "first_name")
         }
         if(UserDefaults.standard.string(forKey: "last_name") != nil) {
             lastNameField.text = UserDefaults.standard.string(forKey: "last_name")
+        }
+//        if(UserDefaults.standard.string(forKey: "username") == nil) {
+//            if(UserDefaults.standard.string(forKey: "email") != nil && (UserDefaults.standard.string(forKey: "email")?.contains("@"))!) {
+//                let endIndex = UserDefaults.standard.string(forKey: "email")?.range(of: "@")!.lowerBound
+//                let indexStartOfText = UserDefaults.standard.string(forKey: "email").index(0, offsetBy: endIndex)
+//                usernameField.text = UserDefaults.standard.string(forKey: "email")?[indexStartOfText...]
+//            }
+//        }
+        if(UserDefaults.standard.string(forKey: "username") != nil) {
+            usernameField.text = UserDefaults.standard.string(forKey: "username")
         }
         // Do any additional setup after loading the view.
     }
@@ -37,19 +51,41 @@ class NameViewController: UIViewController {
     
     // Name validators
     func isValidNameString(testStr:String) -> Bool {
-        let nameStringRegEx = "[A-Za-z'’.-]{2,64}"
+        let nameStringRegEx = "[A-Za-z'’.-]{1,64}"
         let nameStringTest = NSPredicate(format:"SELF MATCHES %@", nameStringRegEx)
         
         return nameStringTest.evaluate(with: testStr)
     }
     
-    func isNameFieldValid(first_name: String, last_name: String) -> Bool {
+    func isValidUsernameString(testStr:String) -> Bool {
+        let nameStringRegEx = "[A-Za-z0-9._]{1,64}"
+        let nameStringTest = NSPredicate(format:"SELF MATCHES %@", nameStringRegEx)
+        
+        return nameStringTest.evaluate(with: testStr)
+    }
+    func isNameFieldValid(first_name: String, last_name: String, username: String) -> Bool {
         if((firstNameField.text?.isEmpty)! || (lastNameField.text?.isEmpty)!) {
             self.showToast(message: "Please enter your name")
             return false;
         }
-        if(!isValidNameString(testStr: first_name) || !isValidNameString(testStr: last_name) ){
+        else if(!isValidNameString(testStr: first_name) || !isValidNameString(testStr: last_name) ){
             self.showToast(message: "Please enter a valid name")
+            return false;
+        }
+        else if(usernameField.text?.isEmpty)! {
+            self.showToast(message: "Please enter a username")
+            return false;
+        }
+        else if(!isValidUsernameString(testStr: username)) {
+            self.showToast(message: "Only characters, numbers, underscores, and periods are allowed")
+            return false;
+        }
+        else if(passwordField.text?.isEmpty)! {
+            self.showToast(message: "Please enter a password")
+            return false;
+        }
+        else if((passwordField.text?.count)! < 8) {
+            self.showToast(message: "Please enter a longer password")
             return false;
         }
         return true;
@@ -73,17 +109,45 @@ class NameViewController: UIViewController {
         savesFieldsAndMinimizesKeyboard()
     }
     
+    @IBAction func usernameReturnPressed(_ sender: Any) {
+        savesFieldsAndMinimizesKeyboard()
+        checkNameFieldAndSendsToNextViewController()
+    }
+    
     func savesFieldsAndMinimizesKeyboard() {
         firstNameField.resignFirstResponder()
         lastNameField.resignFirstResponder()
+        passwordField.resignFirstResponder()
+        usernameField.resignFirstResponder()
         UserDefaults.standard.set(self.firstNameField.text?.trimmingCharacters(in: .whitespacesAndNewlines), forKey: "first_name")
         UserDefaults.standard.set(self.lastNameField.text?.trimmingCharacters(in: .whitespacesAndNewlines), forKey: "last_name")
+        UserDefaults.standard.set(self.usernameField.text?.trimmingCharacters(in: .whitespacesAndNewlines), forKey: "username")
     }
     
     func checkNameFieldAndSendsToNextViewController() {
-        if(isNameFieldValid(first_name: (self.firstNameField.text?.trimmingCharacters(in: .whitespacesAndNewlines))!, last_name: (self.lastNameField.text?.trimmingCharacters(in: .whitespacesAndNewlines))!)) {
-            let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "ChooseUsernameViewController") as! ChooseUsernameViewController
-            AppUtility.SegueFromLeftViewControllerHelper(sourceViewController: self, destinationViewController: nextViewController)
+        if(isNameFieldValid(first_name: (self.firstNameField.text?.trimmingCharacters(in: .whitespacesAndNewlines))!, last_name: (self.lastNameField.text?.trimmingCharacters(in: .whitespacesAndNewlines))!, username: (self.usernameField.text?.trimmingCharacters(in: .whitespacesAndNewlines))!)){
+            UserLoginSignUpAPI.createNewUser(email: UserDefaults.standard.string(forKey: "email")!, username: (self.usernameField.text?.trimmingCharacters(in: .whitespacesAndNewlines))!, password: self.passwordField.text!, first_name: (self.firstNameField.text?.trimmingCharacters(in: .whitespacesAndNewlines))!, last_name: (self.lastNameField.text?.trimmingCharacters(in: .whitespacesAndNewlines))! , completion: { response in
+                let statusCode = response
+                DispatchQueue.main.async {
+                    if(statusCode == 201) {
+                        self.showToast(message: "Yay")
+//                        UserDefaults.standard.set(email, forKey: "email")
+//                        let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "NameViewController") as! NameViewController
+//                        AppUtility.SegueFromLeftViewControllerHelper(sourceViewController: self, destinationViewController: nextViewController)
+                    }
+//                    else if(statusCode == 200) {
+//                        UserDefaults.standard.set(email, forKey: "email")
+//                        let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "EnterPasswordViewController") as! EnterPasswordViewController
+//                        AppUtility.SegueFromLeftViewControllerHelper(sourceViewController: self, destinationViewController: nextViewController)
+//                    }
+                    else {
+                        self.showToast(message: "Sorry, something went wrong")
+                    }
+                }
+            })
+        }
+//            let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "SetPasswordViewController") as! SetPasswordViewController
+//            AppUtility.SegueFromLeftViewControllerHelper(sourceViewController: self, destinationViewController: nextViewController)
         }
     }
     /*
@@ -96,4 +160,4 @@ class NameViewController: UIViewController {
     }
     */
 
-}
+
