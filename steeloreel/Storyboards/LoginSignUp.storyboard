@@ -38,7 +38,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <variation key="heightClass=regular-widthClass=regular">
-                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 </variation>
                                 <connections>
                                     <action selector="continueButtonPressed:" destination="NGn-jW-Kn2" eventType="touchUpInside" id="HMB-ct-8xm"/>
@@ -81,7 +81,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <variation key="heightClass=regular-widthClass=regular">
-                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 </variation>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q84-KV-kF5">
@@ -102,7 +102,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <variation key="heightClass=regular-widthClass=regular">
-                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 </variation>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email address" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tdc-23-DzG">
@@ -117,7 +117,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" textContentType="email"/>
                                 <variation key="heightClass=regular-widthClass=regular">
-                                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 </variation>
                                 <connections>
                                     <action selector="returnKeyPressed:" destination="NGn-jW-Kn2" eventType="primaryActionTriggered" id="u7o-uF-Sqg"/>
@@ -236,18 +236,18 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="3XI-So-bYW">
-                                <rect key="frame" x="16" y="106.33333333333331" width="343" height="264"/>
+                                <rect key="frame" x="16" y="106.33333333333331" width="343" height="271"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wEH-BV-YYw">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="18"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <nil key="highlightedColor"/>
                                         <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                         </variation>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="k9o-C6-ZAX">
-                                        <rect key="frame" x="0.0" y="33.000000000000014" width="343" height="30"/>
+                                        <rect key="frame" x="0.0" y="35.333333333333329" width="343" height="30"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First" textAlignment="natural" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="0xF-Xf-lSm">
                                                 <rect key="frame" x="0.0" y="0.0" width="161.66666666666666" height="30"/>
@@ -276,15 +276,15 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jdI-QP-Cry">
-                                        <rect key="frame" x="0.0" y="78.000000000000014" width="343" height="18"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                        <rect key="frame" x="0.0" y="80.333333333333329" width="343" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <nil key="highlightedColor"/>
                                         <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                         </variation>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="eKC-A5-rHN">
-                                        <rect key="frame" x="0.0" y="111.00000000000001" width="343" height="29.999999999999986"/>
+                                        <rect key="frame" x="0.0" y="115.66666666666669" width="343" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" textContentType="username"/>
@@ -296,15 +296,15 @@
                                         </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YWe-vY-JF8">
-                                        <rect key="frame" x="0.0" y="156" width="343" height="18"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                        <rect key="frame" x="0.0" y="160.66666666666669" width="343" height="20.333333333333343"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <nil key="highlightedColor"/>
                                         <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                         </variation>
                                     </label>
                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KNv-7w-iPY">
-                                        <rect key="frame" x="0.0" y="189" width="343" height="75"/>
+                                        <rect key="frame" x="0.0" y="196" width="343" height="75"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Create an 8+ character password" textAlignment="natural" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="3OK-BY-jPL">
                                                 <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
@@ -319,7 +319,9 @@
                                                 <rect key="frame" x="323" y="0.0" width="15" height="15"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="cib-j5-JVk" secondAttribute="height" multiplier="1:1" id="AzK-tp-lvT"/>
-                                                    <constraint firstAttribute="width" constant="15" id="K78-F1-Vgl"/>
+                                                    <constraint firstAttribute="width" constant="15" id="K78-F1-Vgl">
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="20"/>
+                                                    </constraint>
                                                 </constraints>
                                                 <connections>
                                                     <action selector="viewIconTouched:" destination="zfy-JU-2p4" eventType="touchUpInside" id="u4V-bz-Evc"/>
@@ -329,7 +331,9 @@
                                                 <rect key="frame" x="323" y="0.0" width="15" height="15"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Rfi-6C-L5O" secondAttribute="height" multiplier="1:1" id="ZaP-DY-gaS"/>
-                                                    <constraint firstAttribute="width" constant="15" id="xOj-BE-9G1"/>
+                                                    <constraint firstAttribute="width" constant="15" id="xOj-BE-9G1">
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="20"/>
+                                                    </constraint>
                                                 </constraints>
                                                 <connections>
                                                     <action selector="viewIconTouched:" destination="zfy-JU-2p4" eventType="touchUpInside" id="cMn-TY-fug"/>
@@ -371,7 +375,7 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=regular">
-                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
                                 </variation>
                             </label>
                         </subviews>
