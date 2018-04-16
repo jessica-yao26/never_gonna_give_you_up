@@ -36,6 +36,7 @@ class LoginSignUpViewController: UIViewController {
     
     func isEmailFieldValid(email: String) -> Bool {
         if(email.isEmpty) {
+            emailField.becomeFirstResponder()
             self.showToast(message: "Please enter your email")
             return false;
         }

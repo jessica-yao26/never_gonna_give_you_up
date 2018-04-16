@@ -90,8 +90,14 @@ class NameViewController: UIViewController {
         return nameStringTest.evaluate(with: testStr)
     }
     func isNameFieldValid(first_name: String, last_name: String, username: String) -> Bool {
-        if((firstNameField.text?.isEmpty)! || (lastNameField.text?.isEmpty)!) {
-            self.showToast(message: "Please enter your name")
+        if((firstNameField.text?.isEmpty)!) {
+            firstNameField.becomeFirstResponder()
+            self.showToast(message: "Please enter your first name")
+            return false;
+        }
+        else if((lastNameField.text?.isEmpty)!) {
+            lastNameField.becomeFirstResponder()
+            self.showToast(message: "Please enter your last name")
             return false;
         }
         else if(!isValidNameString(testStr: first_name) || !isValidNameString(testStr: last_name) ){
@@ -99,6 +105,7 @@ class NameViewController: UIViewController {
             return false;
         }
         else if(usernameField.text?.isEmpty)! {
+            usernameField.becomeFirstResponder()
             self.showToast(message: "Please enter a username")
             return false;
         }
@@ -107,6 +114,7 @@ class NameViewController: UIViewController {
             return false;
         }
         else if(passwordField.text?.isEmpty)! {
+            passwordField.becomeFirstResponder()
             self.showToast(message: "Please enter a password")
             return false;
         }
