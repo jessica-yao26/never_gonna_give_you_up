@@ -13,13 +13,27 @@ class NameViewController: UIViewController {
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var forwardButton: UIButton!
     
+    @IBOutlet weak var hideIcon: UIButton!
+    @IBOutlet weak var viewIcon: UIButton!
+    
     @IBOutlet weak var firstNameField: UITextField!
     @IBOutlet weak var lastNameField: UITextField!
-    @IBOutlet weak var passwordField: UITextField!
+
     @IBOutlet weak var usernameField: UITextField!
+    @IBOutlet weak var passwordField: UITextField!
+    
+    @IBOutlet weak var customView: UIView!
+    
+
+//    viewIcon.setBackgroundImage(viewIconImage, for: .normal)
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let hideIconImage = UIImage(named: "view")
+        let viewIconImage = UIImage(named: "hide")
+        hideIcon.setBackgroundImage(hideIconImage, for: .normal)
+        viewIcon.setBackgroundImage(viewIconImage, for: .normal)
+        hideIcon.isHidden = true;
         AppUtility.setArrowButtonImages(backButton: backButton, forwardButton: forwardButton)
         firstNameField.setBottomBorder()
         lastNameField.setBottomBorder()
@@ -41,6 +55,7 @@ class NameViewController: UIViewController {
         if(UserDefaults.standard.string(forKey: "username") != nil) {
             usernameField.text = UserDefaults.standard.string(forKey: "username")
         }
+        
         // Do any additional setup after loading the view.
     }
 
@@ -105,25 +120,36 @@ class NameViewController: UIViewController {
         checkNameFieldAndSendsToNextViewController()
     }
     
-    @IBAction func backPressedFromNameScreen(_ sender: Any) {
-        savesFieldsAndMinimizesKeyboard()
-    }
-    
     @IBAction func usernameReturnPressed(_ sender: Any) {
         savesFieldsAndMinimizesKeyboard()
         checkNameFieldAndSendsToNextViewController()
     }
+//    @IBAction func passwordReturnPressed(_ sender: Any) {
+//        savesFieldsAndMinimizesKeyboard()
+//        checkNameFieldAndSendsToNextViewController()
+//    }
     
+    @IBAction func backPressedFromNameScreen(_ sender: Any) {
+        savesFieldsAndMinimizesKeyboard()
+    }
+    
+    @IBAction func viewIconTouched(_ sender: Any) {
+        print("viewIcontouched")
+        passwordField.isSecureTextEntry = !passwordField.isSecureTextEntry;
+        hideIcon.isHidden = !hideIcon.isHidden
+        viewIcon.isHidden = !viewIcon.isHidden
+
+    }
     func savesFieldsAndMinimizesKeyboard() {
         firstNameField.resignFirstResponder()
         lastNameField.resignFirstResponder()
-        passwordField.resignFirstResponder()
+//        passwordField.resignFirstResponder()
         usernameField.resignFirstResponder()
         UserDefaults.standard.set(self.firstNameField.text?.trimmingCharacters(in: .whitespacesAndNewlines), forKey: "first_name")
         UserDefaults.standard.set(self.lastNameField.text?.trimmingCharacters(in: .whitespacesAndNewlines), forKey: "last_name")
         UserDefaults.standard.set(self.usernameField.text?.trimmingCharacters(in: .whitespacesAndNewlines), forKey: "username")
     }
-    
+
     func checkNameFieldAndSendsToNextViewController() {
         if(isNameFieldValid(first_name: (self.firstNameField.text?.trimmingCharacters(in: .whitespacesAndNewlines))!, last_name: (self.lastNameField.text?.trimmingCharacters(in: .whitespacesAndNewlines))!, username: (self.usernameField.text?.trimmingCharacters(in: .whitespacesAndNewlines))!)){
             UserLoginSignUpAPI.createNewUser(email: UserDefaults.standard.string(forKey: "email")!, username: (self.usernameField.text?.trimmingCharacters(in: .whitespacesAndNewlines))!, password: self.passwordField.text!, first_name: (self.firstNameField.text?.trimmingCharacters(in: .whitespacesAndNewlines))!, last_name: (self.lastNameField.text?.trimmingCharacters(in: .whitespacesAndNewlines))! , completion: { response in

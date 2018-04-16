@@ -19,13 +19,13 @@ struct StyloURL {
     static let baseURL = "127.0.0.1"
     static let port = 8000
     
-    private static func styloURL(method: Method) -> URL {
+    private static func styloURL(method: Method, parameters: [String:String]?) -> URL {
         var components = URLComponents()
         components.scheme = scheme;
         components.host = baseURL;
         components.port = port;
         components.path = method.rawValue;
-//        var queryItems = [URLQueryItem]()
+        var queryItems = [URLQueryItem]()
 //        let baseParams = [
 //            //"format" : "json"
 //        ]
@@ -35,21 +35,21 @@ struct StyloURL {
 //            queryItems.append(item)
 //        }
 //
-//        if let additionalParams = parameters {
-//            for (key, value) in additionalParams {
-//                let item = URLQueryItem(name: key, value: value)
-//                queryItems.append(item)
-//            }
-//        }
-//        components.queryItems = queryItems
+        if let additionalParams = parameters {
+            for (key, value) in additionalParams {
+                let item = URLQueryItem(name: key, value: value)
+                queryItems.append(item)
+            }
+        }
+        components.queryItems = queryItems
         return components.url!
     }
     
-    static func checkEmailURL() -> URL {
-        return styloURL(method: .checkUserEmailExists)
+    static func checkEmailURL(email: String) -> URL {
+        return styloURL(method: .checkUserEmailExists, parameters: ["email": email])
     }
     
     static func createNewUser() -> URL {
-        return styloURL(method: .createNewUser)
+        return styloURL(method: .createNewUser, parameters: [:])
     }
 }

@@ -15,6 +15,7 @@
 		4D104D29207B2C050057D308 /* ChooseUsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D104D28207B2C050057D308 /* ChooseUsernameViewController.swift */; };
 		4D104D2B207C54CF0057D308 /* SegueFromLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D104D2A207C54CF0057D308 /* SegueFromLeft.swift */; };
 		4D104D2D207C558E0057D308 /* SegueFromRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D104D2C207C558E0057D308 /* SegueFromRight.swift */; };
+		4D3B3C842083BD20004D9091 /* PassThroughToWindowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3B3C832083BD20004D9091 /* PassThroughToWindowView.swift */; };
 		4D3D24BD206AFAC000003275 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3D24BC206AFAC000003275 /* AppDelegate.swift */; };
 		4D3D24BF206AFAC100003275 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3D24BE206AFAC100003275 /* FirstViewController.swift */; };
 		4D3D24C1206AFAC100003275 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3D24C0206AFAC100003275 /* SecondViewController.swift */; };
@@ -56,6 +57,7 @@
 		4D104D28207B2C050057D308 /* ChooseUsernameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseUsernameViewController.swift; sourceTree = "<group>"; };
 		4D104D2A207C54CF0057D308 /* SegueFromLeft.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueFromLeft.swift; sourceTree = "<group>"; };
 		4D104D2C207C558E0057D308 /* SegueFromRight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueFromRight.swift; sourceTree = "<group>"; };
+		4D3B3C832083BD20004D9091 /* PassThroughToWindowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassThroughToWindowView.swift; sourceTree = "<group>"; };
 		4D3D24B9206AFAC000003275 /* steeloreel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = steeloreel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D3D24BC206AFAC000003275 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D3D24BE206AFAC100003275 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 				4D3D24F3206C96DA00003275 /* AppUtility.swift */,
 				4D104D2A207C54CF0057D308 /* SegueFromLeft.swift */,
 				4D104D2C207C558E0057D308 /* SegueFromRight.swift */,
+				4D3B3C832083BD20004D9091 /* PassThroughToWindowView.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -348,6 +351,7 @@
 				4D104D2B207C54CF0057D308 /* SegueFromLeft.swift in Sources */,
 				4DF8A2D12071659C00F44A09 /* UIViewController+Toast.swift in Sources */,
 				4D3D24BD206AFAC000003275 /* AppDelegate.swift in Sources */,
+				4D3B3C842083BD20004D9091 /* PassThroughToWindowView.swift in Sources */,
 				4D104D29207B2C050057D308 /* ChooseUsernameViewController.swift in Sources */,
 				4D104D1D207486690057D308 /* UserLoginSignUpAPI.swift in Sources */,
 				4D3D24BF206AFAC100003275 /* FirstViewController.swift in Sources */,

@@ -11,13 +11,9 @@ import Foundation
 struct UserLoginSignUpAPI {
     
     static func checkEmail(email: String, completion : @escaping (Int) -> Void) {
-        let URL = StyloURL.checkEmailURL();
+        let URL = StyloURL.checkEmailURL(email: email);
         var request = URLRequest(url: URL);
         request.httpMethod = "GET";
-        let json = ["email": email];
-        let jsonData =  try? JSONSerialization.data(withJSONObject: json);
-        request.httpBody = jsonData;
-        request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type");
         let task = URLSession.shared.dataTask(with: request, completionHandler: {
             data, response, error in guard error == nil else {
                 completion(-1)
