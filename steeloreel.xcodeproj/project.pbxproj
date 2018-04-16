@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D07F3A420851D8F004D04E6 /* UIButton+moveImageLeftTextCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D07F3A320851D8F004D04E6 /* UIButton+moveImageLeftTextCenter.swift */; };
 		4D104D1B2074856D0057D308 /* StyloURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D104D1A2074856D0057D308 /* StyloURL.swift */; };
 		4D104D1D207486690057D308 /* UserLoginSignUpAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D104D1C207486690057D308 /* UserLoginSignUpAPI.swift */; };
 		4D104D1F2079CF090057D308 /* EnterPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D104D1E2079CF090057D308 /* EnterPasswordViewController.swift */; };
@@ -15,7 +16,6 @@
 		4D104D29207B2C050057D308 /* ChooseUsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D104D28207B2C050057D308 /* ChooseUsernameViewController.swift */; };
 		4D104D2B207C54CF0057D308 /* SegueFromLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D104D2A207C54CF0057D308 /* SegueFromLeft.swift */; };
 		4D104D2D207C558E0057D308 /* SegueFromRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D104D2C207C558E0057D308 /* SegueFromRight.swift */; };
-		4D3B3C842083BD20004D9091 /* PassThroughToWindowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3B3C832083BD20004D9091 /* PassThroughToWindowView.swift */; };
 		4D3D24BD206AFAC000003275 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3D24BC206AFAC000003275 /* AppDelegate.swift */; };
 		4D3D24BF206AFAC100003275 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3D24BE206AFAC100003275 /* FirstViewController.swift */; };
 		4D3D24C1206AFAC100003275 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3D24C0206AFAC100003275 /* SecondViewController.swift */; };
@@ -49,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4D07F3A320851D8F004D04E6 /* UIButton+moveImageLeftTextCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+moveImageLeftTextCenter.swift"; sourceTree = "<group>"; };
 		4D104D1A2074856D0057D308 /* StyloURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyloURL.swift; sourceTree = "<group>"; };
 		4D104D1C207486690057D308 /* UserLoginSignUpAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginSignUpAPI.swift; sourceTree = "<group>"; };
 		4D104D1E2079CF090057D308 /* EnterPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterPasswordViewController.swift; sourceTree = "<group>"; };
@@ -57,7 +58,6 @@
 		4D104D28207B2C050057D308 /* ChooseUsernameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseUsernameViewController.swift; sourceTree = "<group>"; };
 		4D104D2A207C54CF0057D308 /* SegueFromLeft.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueFromLeft.swift; sourceTree = "<group>"; };
 		4D104D2C207C558E0057D308 /* SegueFromRight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueFromRight.swift; sourceTree = "<group>"; };
-		4D3B3C832083BD20004D9091 /* PassThroughToWindowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassThroughToWindowView.swift; sourceTree = "<group>"; };
 		4D3D24B9206AFAC000003275 /* steeloreel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = steeloreel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D3D24BC206AFAC000003275 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D3D24BE206AFAC100003275 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -171,6 +171,7 @@
 			children = (
 				4DF8A2D02071659C00F44A09 /* UIViewController+Toast.swift */,
 				4D104D24207B21A20057D308 /* UITextField+BottomBorder.swift */,
+				4D07F3A320851D8F004D04E6 /* UIButton+moveImageLeftTextCenter.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -182,7 +183,6 @@
 				4D3D24F3206C96DA00003275 /* AppUtility.swift */,
 				4D104D2A207C54CF0057D308 /* SegueFromLeft.swift */,
 				4D104D2C207C558E0057D308 /* SegueFromRight.swift */,
-				4D3B3C832083BD20004D9091 /* PassThroughToWindowView.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -346,12 +346,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D3D24ED206B4CC300003275 /* LoginSignUpViewController.swift in Sources */,
+				4D07F3A420851D8F004D04E6 /* UIButton+moveImageLeftTextCenter.swift in Sources */,
 				4D3D24C1206AFAC100003275 /* SecondViewController.swift in Sources */,
 				4D3D24F4206C96DA00003275 /* AppUtility.swift in Sources */,
 				4D104D2B207C54CF0057D308 /* SegueFromLeft.swift in Sources */,
 				4DF8A2D12071659C00F44A09 /* UIViewController+Toast.swift in Sources */,
 				4D3D24BD206AFAC000003275 /* AppDelegate.swift in Sources */,
-				4D3B3C842083BD20004D9091 /* PassThroughToWindowView.swift in Sources */,
 				4D104D29207B2C050057D308 /* ChooseUsernameViewController.swift in Sources */,
 				4D104D1D207486690057D308 /* UserLoginSignUpAPI.swift in Sources */,
 				4D3D24BF206AFAC100003275 /* FirstViewController.swift in Sources */,

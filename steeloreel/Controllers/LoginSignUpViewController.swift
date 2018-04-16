@@ -12,14 +12,38 @@ class LoginSignUpViewController: UIViewController {
 
     @IBOutlet weak var emailField: UITextField!
     
+    @IBOutlet weak var googleBtn: UIButton!
+    @IBOutlet weak var facebookBtn: UIButton!
+    @IBOutlet weak var continueBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         AppUtility.setupLandingView(view: self.view)
         if(UserDefaults.standard.string(forKey: "email") != nil) {
             emailField.text = UserDefaults.standard.string(forKey: "email")
         }
-    }
+        view.bringSubview(toFront: emailField)
+        view.bringSubview(toFront: continueBtn)
+//        let googleImg: UIImage? = UIImage(named:"google-icon")?.withRenderingMode(.alwaysOriginal)
+//        let facebookImg: UIImage? = UIImage(named:"facebook-icon")?.withRenderingMode(.alwaysOriginal)
 
+//        googleBtn.setImage(googleImg, for: .normal)
+//        facebookBtn.setImage(facebookImg, for: .normal)
+//        googleBtn.moveImageLeftTextCenter()
+//        facebookBtn.moveImageLeftTextCenter()
+//        googleBtn.titleRect(forContentRect: googleBtn.frame)
+    }
+    
+    @IBDesignable
+    class LeftAlignedIconButton: UIButton {
+        override func titleRect(forContentRect contentRect: CGRect) -> CGRect {
+            let titleRect = super.titleRect(forContentRect: contentRect)
+            let imageSize = currentImage?.size ?? .zero
+            let availableWidth = contentRect.width - imageEdgeInsets.right - imageSize.width - titleRect.width
+            return titleRect.offsetBy(dx: round(availableWidth / 2), dy: 0)
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

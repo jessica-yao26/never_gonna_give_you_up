@@ -20,24 +20,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibF-hk-4BB">
-                                <rect key="frame" x="166" y="323" width="0.0" height="0.0"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8yt-Ta-YVy">
-                                <rect key="frame" x="166" y="323" width="0.0" height="0.0"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.22024684994550586" green="0.64972679615031337" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qZR-xv-xkr">
-                                <rect key="frame" x="16" y="728" width="343" height="30"/>
+                                <rect key="frame" x="16" y="625" width="343" height="39"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Continue">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -50,18 +36,8 @@
                                     <action selector="continueButtonPressed:" destination="NGn-jW-Kn2" eventType="touchUpInside" id="HMB-ct-8xm"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tdc-23-DzG">
-                                <rect key="frame" x="16" y="698" width="343" height="30"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" textContentType="email"/>
-                                <connections>
-                                    <action selector="returnKeyPressed:" destination="NGn-jW-Kn2" eventType="primaryActionTriggered" id="u7o-uF-Sqg"/>
-                                </connections>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stylo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wmW-w4-osy">
-                                <rect key="frame" x="153.66666666666666" y="160" width="68" height="68"/>
+                                <rect key="frame" x="154" y="160" width="68" height="68"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="68" id="UVw-1k-YcL"/>
@@ -72,46 +48,115 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qr7-Gy-Vg3">
-                                <rect key="frame" x="16" y="644" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qr7-Gy-Vg3">
+                                <rect key="frame" x="16" y="746" width="343" height="50"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Rt8-2h-mvB"/>
+                                </constraints>
                                 <state key="normal" title="Continue with Facebook">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q84-KV-kF5">
-                                <rect key="frame" x="16" y="606" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q84-KV-kF5">
+                                <rect key="frame" x="16" y="688" width="343" height="50"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="hBk-T4-aU8"/>
+                                </constraints>
                                 <state key="normal" title="Continue with Google">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email address" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tdc-23-DzG">
+                                <rect key="frame" x="16" y="585" width="343" height="40"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Grg-qp-72l"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" textContentType="email"/>
+                                <connections>
+                                    <action selector="returnKeyPressed:" destination="NGn-jW-Kn2" eventType="primaryActionTriggered" id="u7o-uF-Sqg"/>
+                                </connections>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="google-icon" translatesAutoresizingMaskIntoConstraints="NO" id="10d-Ou-KFj">
+                                <rect key="frame" x="16" y="688" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="10d-Ou-KFj" secondAttribute="height" multiplier="1:1" id="Dzg-Ib-MuN"/>
+                                    <constraint firstAttribute="width" constant="50" id="F8h-HZ-YqY"/>
+                                    <constraint firstAttribute="width" secondItem="10d-Ou-KFj" secondAttribute="height" multiplier="1:1" id="eMa-VC-6VB"/>
+                                    <constraint firstAttribute="height" constant="50" id="zeE-Gh-3Ac"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="facebook-icon" translatesAutoresizingMaskIntoConstraints="NO" id="4fu-OO-MWj">
+                                <rect key="frame" x="16" y="746" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="1tK-bc-6Zc"/>
+                                    <constraint firstAttribute="width" constant="50" id="FXW-8M-raU"/>
+                                    <constraint firstAttribute="width" secondItem="4fu-OO-MWj" secondAttribute="height" multiplier="1:1" id="rGk-Ok-kKj"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="qZR-xv-xkr" firstAttribute="top" secondItem="Tdc-23-DzG" secondAttribute="bottom" id="6TD-zl-kA9"/>
-                            <constraint firstItem="FmM-vD-VAU" firstAttribute="bottom" secondItem="qZR-xv-xkr" secondAttribute="bottom" constant="20" id="AwT-CC-sJF" customClass="KeyboardLayoutConstraint" customModule="steeloreel" customModuleProvider="target"/>
-                            <constraint firstItem="Tdc-23-DzG" firstAttribute="centerX" secondItem="grr-pn-7gb" secondAttribute="centerX" id="CVG-Jh-McI"/>
-                            <constraint firstItem="qZR-xv-xkr" firstAttribute="height" secondItem="Tdc-23-DzG" secondAttribute="height" id="Coc-e1-ghF"/>
+                            <constraint firstItem="q84-KV-kF5" firstAttribute="leading" secondItem="FmM-vD-VAU" secondAttribute="leading" constant="16" id="2Tm-jI-I4O"/>
+                            <constraint firstItem="Qr7-Gy-Vg3" firstAttribute="trailing" secondItem="Tdc-23-DzG" secondAttribute="trailing" id="6gF-g8-bgU"/>
                             <constraint firstItem="wmW-w4-osy" firstAttribute="top" secondItem="FmM-vD-VAU" secondAttribute="top" constant="116" id="Feg-qb-dyb"/>
+                            <constraint firstItem="Qr7-Gy-Vg3" firstAttribute="width" secondItem="Tdc-23-DzG" secondAttribute="width" id="Fzy-0z-y8f"/>
+                            <constraint firstItem="4fu-OO-MWj" firstAttribute="width" secondItem="10d-Ou-KFj" secondAttribute="width" id="G3Q-9B-QRW"/>
+                            <constraint firstItem="FmM-vD-VAU" firstAttribute="trailing" secondItem="Qr7-Gy-Vg3" secondAttribute="trailing" constant="16" id="G3U-TK-EGy"/>
+                            <constraint firstItem="q84-KV-kF5" firstAttribute="centerX" secondItem="grr-pn-7gb" secondAttribute="centerX" id="GAA-SZ-DIV"/>
+                            <constraint firstItem="Qr7-Gy-Vg3" firstAttribute="leading" secondItem="4fu-OO-MWj" secondAttribute="leading" id="GLo-Mw-nYf"/>
+                            <constraint firstAttribute="bottom" secondItem="Qr7-Gy-Vg3" secondAttribute="bottom" constant="16" id="GjH-R7-IV2" customClass="KeyboardLayoutConstraint" customModule="steeloreel" customModuleProvider="target"/>
+                            <constraint firstItem="Qr7-Gy-Vg3" firstAttribute="leading" secondItem="FmM-vD-VAU" secondAttribute="leading" constant="16" id="JAH-W8-wtH"/>
+                            <constraint firstItem="FmM-vD-VAU" firstAttribute="trailing" secondItem="q84-KV-kF5" secondAttribute="trailing" constant="16" id="LKw-hF-bpe"/>
+                            <constraint firstItem="Qr7-Gy-Vg3" firstAttribute="top" secondItem="4fu-OO-MWj" secondAttribute="top" id="Nfn-ph-Hxn"/>
+                            <constraint firstItem="qZR-xv-xkr" firstAttribute="trailing" secondItem="Tdc-23-DzG" secondAttribute="trailing" id="NpD-mH-v3V"/>
+                            <constraint firstItem="Qr7-Gy-Vg3" firstAttribute="centerX" secondItem="grr-pn-7gb" secondAttribute="centerX" id="OJ8-Rm-fhh"/>
+                            <constraint firstItem="Qr7-Gy-Vg3" firstAttribute="top" secondItem="q84-KV-kF5" secondAttribute="bottom" constant="8" id="QmU-H0-3Am"/>
+                            <constraint firstItem="q84-KV-kF5" firstAttribute="top" secondItem="10d-Ou-KFj" secondAttribute="top" id="R7M-Ms-Wfk"/>
+                            <constraint firstItem="10d-Ou-KFj" firstAttribute="leading" secondItem="q84-KV-kF5" secondAttribute="leading" id="SC9-sm-IbP"/>
                             <constraint firstItem="qZR-xv-xkr" firstAttribute="centerX" secondItem="grr-pn-7gb" secondAttribute="centerX" id="Ta2-Gi-Xf5"/>
+                            <constraint firstItem="4fu-OO-MWj" firstAttribute="height" secondItem="10d-Ou-KFj" secondAttribute="height" id="UbW-ZH-A4J"/>
+                            <constraint firstItem="qZR-xv-xkr" firstAttribute="top" secondItem="Tdc-23-DzG" secondAttribute="bottom" id="VBJ-ny-vBL"/>
+                            <constraint firstItem="q84-KV-kF5" firstAttribute="top" secondItem="10d-Ou-KFj" secondAttribute="top" id="YKy-qG-eRH"/>
+                            <constraint firstItem="Qr7-Gy-Vg3" firstAttribute="leading" secondItem="Tdc-23-DzG" secondAttribute="leading" id="YQT-5j-W7v"/>
+                            <constraint firstItem="qZR-xv-xkr" firstAttribute="centerX" secondItem="grr-pn-7gb" secondAttribute="centerX" id="YYW-Re-vOX"/>
+                            <constraint firstItem="q84-KV-kF5" firstAttribute="width" secondItem="Tdc-23-DzG" secondAttribute="width" id="ZKq-dR-gxr"/>
+                            <constraint firstItem="q84-KV-kF5" firstAttribute="top" secondItem="qZR-xv-xkr" secondAttribute="bottom" constant="24" id="ZQw-r1-QXR"/>
+                            <constraint firstItem="qZR-xv-xkr" firstAttribute="width" secondItem="Tdc-23-DzG" secondAttribute="width" id="beS-Gh-ie2"/>
+                            <constraint firstItem="Tdc-23-DzG" firstAttribute="leading" secondItem="qZR-xv-xkr" secondAttribute="leading" id="g2K-eg-6cB"/>
                             <constraint firstItem="qZR-xv-xkr" firstAttribute="width" secondItem="Tdc-23-DzG" secondAttribute="width" id="gM9-FD-FPv"/>
+                            <constraint firstItem="qZR-xv-xkr" firstAttribute="leading" secondItem="Tdc-23-DzG" secondAttribute="leading" id="glg-v7-QLV"/>
+                            <constraint firstItem="q84-KV-kF5" firstAttribute="trailing" secondItem="Tdc-23-DzG" secondAttribute="trailing" id="lbJ-SH-Nmq"/>
                             <constraint firstItem="qZR-xv-xkr" firstAttribute="leading" secondItem="FmM-vD-VAU" secondAttribute="leading" constant="16" id="mJR-Hw-Oc3"/>
                             <constraint firstItem="wmW-w4-osy" firstAttribute="centerX" secondItem="grr-pn-7gb" secondAttribute="centerX" id="nkF-f3-lPi"/>
-                            <constraint firstItem="qZR-xv-xkr" firstAttribute="centerX" secondItem="grr-pn-7gb" secondAttribute="centerX" id="ozi-ax-sSF"/>
-                            <constraint firstItem="Tdc-23-DzG" firstAttribute="leading" secondItem="qZR-xv-xkr" secondAttribute="leading" id="uLE-a5-7fU"/>
+                            <constraint firstItem="q84-KV-kF5" firstAttribute="leading" secondItem="Tdc-23-DzG" secondAttribute="leading" id="rAj-DC-amS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="FmM-vD-VAU"/>
                     </view>
                     <connections>
+                        <outlet property="continueBtn" destination="qZR-xv-xkr" id="ikT-Ra-0EY"/>
                         <outlet property="emailField" destination="Tdc-23-DzG" id="g5z-A2-cjp"/>
+                        <outlet property="facebookBtn" destination="Qr7-Gy-Vg3" id="uW4-aA-e86"/>
+                        <outlet property="googleBtn" destination="q84-KV-kF5" id="1mF-Cc-0Op"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jZc-cb-xxw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="200.80000000000001" y="-376.84729064039408"/>
+            <point key="canvasLocation" x="200.24630541871923" y="-378.39999999999998"/>
         </scene>
         <!--Name View Controller-->
         <scene sceneID="cmB-c1-mMj">
@@ -414,4 +459,8 @@
             <point key="canvasLocation" x="902" y="-683"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="facebook-icon" width="512" height="512"/>
+        <image name="google-icon" width="512" height="512"/>
+    </resources>
 </document>
