@@ -50,7 +50,26 @@ class NameViewController: UIViewController {
         
         // Do any additional setup after loading the view.
     }
-
+    
+    func textFieldShouldReturn(textField: UITextField) {
+        textField.resignFirstResponder()
+        if (textField == firstNameField) {
+            lastNameField.becomeFirstResponder()
+        }
+        else if (textField == lastNameField) {
+            usernameField.becomeFirstResponder()
+        }
+        else if (textField == usernameField) {
+            passwordField.becomeFirstResponder()
+        }
+        else{
+            savesFieldsAndMinimizesKeyboard()
+            checkNameFieldAndSendsToNextViewController()
+//            }
+        }
+        
+//        return true
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -98,13 +117,15 @@ class NameViewController: UIViewController {
         return true;
     }
     @IBAction func firstNameReturnPressed(_ sender: Any) {
-        savesFieldsAndMinimizesKeyboard()
-        checkNameFieldAndSendsToNextViewController()
+        textFieldShouldReturn(textField: firstNameField)
+        //savesFieldsAndMinimizesKeyboard()
+        //checkNameFieldAndSendsToNextViewController()
     }
     
     @IBAction func lastNameReturnPressed(_ sender: Any) {
-        savesFieldsAndMinimizesKeyboard()
-        checkNameFieldAndSendsToNextViewController()
+        textFieldShouldReturn(textField: lastNameField)
+        //savesFieldsAndMinimizesKeyboard()
+        //checkNameFieldAndSendsToNextViewController()
     }
     
     @IBAction func nextPressedFromNameScreen(_ sender: Any) {
@@ -113,8 +134,9 @@ class NameViewController: UIViewController {
     }
     
     @IBAction func usernameReturnPressed(_ sender: Any) {
-        savesFieldsAndMinimizesKeyboard()
-        checkNameFieldAndSendsToNextViewController()
+        textFieldShouldReturn(textField: usernameField)
+        //savesFieldsAndMinimizesKeyboard()
+        //checkNameFieldAndSendsToNextViewController()
     }
 //    @IBAction func passwordReturnPressed(_ sender: Any) {
 //        savesFieldsAndMinimizesKeyboard()
