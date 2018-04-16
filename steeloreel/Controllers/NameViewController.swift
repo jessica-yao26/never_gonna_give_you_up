@@ -53,7 +53,7 @@ class NameViewController: UIViewController {
     }
     
     func textFieldShouldReturn(textField: UITextField) {
-        textField.resignFirstResponder()
+//        textField.resignFirstResponder()
         if (textField == firstNameField) {
             lastNameField.becomeFirstResponder()
         }
@@ -164,10 +164,10 @@ class NameViewController: UIViewController {
 
     }
     func savesFieldsAndMinimizesKeyboard() {
-        firstNameField.resignFirstResponder()
-        lastNameField.resignFirstResponder()
+ //       firstNameField.resignFirstResponder()
+   //     lastNameField.resignFirstResponder()
 //        passwordField.resignFirstResponder()
-        usernameField.resignFirstResponder()
+     //   usernameField.resignFirstResponder()
         UserDefaults.standard.set(self.firstNameField.text?.trimmingCharacters(in: .whitespacesAndNewlines), forKey: "first_name")
         UserDefaults.standard.set(self.lastNameField.text?.trimmingCharacters(in: .whitespacesAndNewlines), forKey: "last_name")
         UserDefaults.standard.set(self.usernameField.text?.trimmingCharacters(in: .whitespacesAndNewlines), forKey: "username")
