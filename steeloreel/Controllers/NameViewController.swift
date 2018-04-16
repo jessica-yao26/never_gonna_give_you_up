@@ -26,6 +26,7 @@ class NameViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.bringSubview(toFront: forwardButton)
         let hideIconImage = UIImage(named: "view")
         let viewIconImage = UIImage(named: "hide")
         hideIcon.setBackgroundImage(hideIconImage, for: .normal)
