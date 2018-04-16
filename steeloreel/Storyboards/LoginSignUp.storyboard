@@ -220,14 +220,20 @@
                                             <constraint firstItem="3OK-BY-jPL" firstAttribute="top" secondItem="KNv-7w-iPY" secondAttribute="top" id="1Xn-G7-pon"/>
                                             <constraint firstAttribute="height" constant="200" id="8bY-xU-cUu"/>
                                             <constraint firstItem="Rfi-6C-L5O" firstAttribute="width" secondItem="cib-j5-JVk" secondAttribute="width" id="F7e-78-4Ek"/>
+                                            <constraint firstItem="Rfi-6C-L5O" firstAttribute="leading" secondItem="cib-j5-JVk" secondAttribute="leading" id="G3m-io-2X8"/>
                                             <constraint firstItem="Rfi-6C-L5O" firstAttribute="height" secondItem="cib-j5-JVk" secondAttribute="height" id="HnN-KY-Uv2"/>
                                             <constraint firstItem="Rfi-6C-L5O" firstAttribute="top" secondItem="cib-j5-JVk" secondAttribute="top" id="I5p-3t-MKS"/>
+                                            <constraint firstItem="Rfi-6C-L5O" firstAttribute="top" secondItem="cib-j5-JVk" secondAttribute="top" id="PlE-ep-2xL"/>
+                                            <constraint firstItem="Rfi-6C-L5O" firstAttribute="height" secondItem="cib-j5-JVk" secondAttribute="height" id="VVN-xm-pdB"/>
                                             <constraint firstItem="Rfi-6C-L5O" firstAttribute="leading" secondItem="cib-j5-JVk" secondAttribute="leading" id="Zbc-n9-Dyp"/>
                                             <constraint firstAttribute="trailing" secondItem="cib-j5-JVk" secondAttribute="trailing" constant="5" id="cCi-HS-Oa0"/>
                                             <constraint firstAttribute="trailing" secondItem="3OK-BY-jPL" secondAttribute="trailing" id="iKk-Ny-xLW"/>
+                                            <constraint firstItem="cib-j5-JVk" firstAttribute="top" secondItem="KNv-7w-iPY" secondAttribute="top" id="kT5-90-Rkb"/>
                                             <constraint firstItem="Rfi-6C-L5O" firstAttribute="top" secondItem="KNv-7w-iPY" secondAttribute="top" id="knj-mN-ExQ" userLabel="View Icon.top = Password Field.top"/>
                                             <constraint firstAttribute="trailing" secondItem="Rfi-6C-L5O" secondAttribute="trailing" constant="5" id="mLf-w2-wDP"/>
+                                            <constraint firstItem="Rfi-6C-L5O" firstAttribute="top" secondItem="KNv-7w-iPY" secondAttribute="top" id="tVv-y3-ERO"/>
                                             <constraint firstItem="3OK-BY-jPL" firstAttribute="leading" secondItem="KNv-7w-iPY" secondAttribute="leading" id="x6c-Ma-AcQ"/>
+                                            <constraint firstItem="Rfi-6C-L5O" firstAttribute="width" secondItem="cib-j5-JVk" secondAttribute="width" id="xZv-cq-Kp8"/>
                                         </constraints>
                                     </view>
                                 </subviews>

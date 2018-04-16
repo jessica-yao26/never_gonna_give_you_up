@@ -23,10 +23,7 @@ class NameViewController: UIViewController {
     @IBOutlet weak var passwordField: UITextField!
     
     @IBOutlet weak var customView: UIView!
-    
 
-//    viewIcon.setBackgroundImage(viewIconImage, for: .normal)
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         let hideIconImage = UIImage(named: "view")
@@ -45,16 +42,11 @@ class NameViewController: UIViewController {
         if(UserDefaults.standard.string(forKey: "last_name") != nil) {
             lastNameField.text = UserDefaults.standard.string(forKey: "last_name")
         }
-//        if(UserDefaults.standard.string(forKey: "username") == nil) {
-//            if(UserDefaults.standard.string(forKey: "email") != nil && (UserDefaults.standard.string(forKey: "email")?.contains("@"))!) {
-//                let endIndex = UserDefaults.standard.string(forKey: "email")?.range(of: "@")!.lowerBound
-//                let indexStartOfText = UserDefaults.standard.string(forKey: "email").index(0, offsetBy: endIndex)
-//                usernameField.text = UserDefaults.standard.string(forKey: "email")?[indexStartOfText...]
-//            }
-//        }
         if(UserDefaults.standard.string(forKey: "username") != nil) {
             usernameField.text = UserDefaults.standard.string(forKey: "username")
         }
+        var token = UserDefaults.standard.string(forKey: "email")?.components(separatedBy: "@")
+        usernameField.text = token?[0]
         
         // Do any additional setup after loading the view.
     }
