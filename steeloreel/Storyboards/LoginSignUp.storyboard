@@ -21,8 +21,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qZR-xv-xkr">
-                                <rect key="frame" x="16" y="625" width="343" height="39"/>
+                                <rect key="frame" x="16" y="624" width="343" height="40"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Y6Y-iv-mkr">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="60"/>
+                                    </constraint>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Continue">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -32,6 +37,9 @@
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                </variation>
                                 <connections>
                                     <action selector="continueButtonPressed:" destination="NGn-jW-Kn2" eventType="touchUpInside" id="HMB-ct-8xm"/>
                                 </connections>
@@ -40,19 +48,28 @@
                                 <rect key="frame" x="154" y="160" width="68" height="68"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="68" id="UVw-1k-YcL"/>
-                                    <constraint firstAttribute="height" constant="68" id="g58-ql-CMU"/>
+                                    <constraint firstAttribute="width" constant="68" id="UVw-1k-YcL">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="136"/>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="68" id="g58-ql-CMU">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="136"/>
+                                    </constraint>
                                 </constraints>
                                 <viewLayoutGuide key="safeArea" id="Qod-PZ-GK8"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qr7-Gy-Vg3">
                                 <rect key="frame" x="16" y="746" width="343" height="50"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="Rt8-2h-mvB"/>
+                                    <constraint firstAttribute="height" constant="50" id="Rt8-2h-mvB">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="75"/>
+                                    </constraint>
                                 </constraints>
                                 <state key="normal" title="Continue with Facebook">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -62,12 +79,17 @@
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                </variation>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q84-KV-kF5">
                                 <rect key="frame" x="16" y="688" width="343" height="50"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="hBk-T4-aU8"/>
+                                    <constraint firstAttribute="height" constant="50" id="hBk-T4-aU8">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="75"/>
+                                    </constraint>
                                 </constraints>
                                 <state key="normal" title="Continue with Google">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -77,16 +99,24 @@
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                </variation>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email address" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tdc-23-DzG">
-                                <rect key="frame" x="16" y="585" width="343" height="40"/>
+                                <rect key="frame" x="16" y="584" width="343" height="40"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="Grg-qp-72l"/>
+                                    <constraint firstAttribute="height" constant="40" id="Grg-qp-72l">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="80"/>
+                                    </constraint>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" textContentType="email"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                </variation>
                                 <connections>
                                     <action selector="returnKeyPressed:" destination="NGn-jW-Kn2" eventType="primaryActionTriggered" id="u7o-uF-Sqg"/>
                                 </connections>
@@ -95,16 +125,24 @@
                                 <rect key="frame" x="16" y="688" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="10d-Ou-KFj" secondAttribute="height" multiplier="1:1" id="Dzg-Ib-MuN"/>
-                                    <constraint firstAttribute="width" constant="50" id="F8h-HZ-YqY"/>
+                                    <constraint firstAttribute="width" constant="50" id="F8h-HZ-YqY">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="75"/>
+                                    </constraint>
                                     <constraint firstAttribute="width" secondItem="10d-Ou-KFj" secondAttribute="height" multiplier="1:1" id="eMa-VC-6VB"/>
-                                    <constraint firstAttribute="height" constant="50" id="zeE-Gh-3Ac"/>
+                                    <constraint firstAttribute="height" constant="50" id="zeE-Gh-3Ac">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="75"/>
+                                    </constraint>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="facebook-icon" translatesAutoresizingMaskIntoConstraints="NO" id="4fu-OO-MWj">
                                 <rect key="frame" x="16" y="746" width="50" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="1tK-bc-6Zc"/>
-                                    <constraint firstAttribute="width" constant="50" id="FXW-8M-raU"/>
+                                    <constraint firstAttribute="height" constant="50" id="1tK-bc-6Zc">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="75"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="50" id="FXW-8M-raU">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="75"/>
+                                    </constraint>
                                     <constraint firstAttribute="width" secondItem="4fu-OO-MWj" secondAttribute="height" multiplier="1:1" id="rGk-Ok-kKj"/>
                                 </constraints>
                             </imageView>
