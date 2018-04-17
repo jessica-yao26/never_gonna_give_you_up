@@ -105,24 +105,6 @@
                                     <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="30"/>
                                 </variation>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email address" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tdc-23-DzG">
-                                <rect key="frame" x="16" y="584" width="343" height="40"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="Grg-qp-72l">
-                                        <variation key="heightClass=regular-widthClass=regular" constant="80"/>
-                                    </constraint>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" textContentType="email"/>
-                                <variation key="heightClass=regular-widthClass=regular">
-                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="27"/>
-                                </variation>
-                                <connections>
-                                    <action selector="returnKeyPressed:" destination="NGn-jW-Kn2" eventType="primaryActionTriggered" id="u7o-uF-Sqg"/>
-                                </connections>
-                            </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="google-icon" translatesAutoresizingMaskIntoConstraints="NO" id="10d-Ou-KFj">
                                 <rect key="frame" x="16" y="688" width="50" height="50"/>
                                 <constraints>
@@ -148,6 +130,24 @@
                                     <constraint firstAttribute="width" secondItem="4fu-OO-MWj" secondAttribute="height" multiplier="1:1" id="rGk-Ok-kKj"/>
                                 </constraints>
                             </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email address" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tdc-23-DzG">
+                                <rect key="frame" x="16" y="576" width="343" height="40"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Grg-qp-72l">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="80"/>
+                                    </constraint>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" textContentType="email"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="27"/>
+                                </variation>
+                                <connections>
+                                    <action selector="returnKeyPressed:" destination="NGn-jW-Kn2" eventType="primaryActionTriggered" id="u7o-uF-Sqg"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -170,7 +170,7 @@
                             <constraint firstItem="10d-Ou-KFj" firstAttribute="leading" secondItem="q84-KV-kF5" secondAttribute="leading" id="SC9-sm-IbP"/>
                             <constraint firstItem="qZR-xv-xkr" firstAttribute="centerX" secondItem="grr-pn-7gb" secondAttribute="centerX" id="Ta2-Gi-Xf5"/>
                             <constraint firstItem="4fu-OO-MWj" firstAttribute="height" secondItem="10d-Ou-KFj" secondAttribute="height" id="UbW-ZH-A4J"/>
-                            <constraint firstItem="qZR-xv-xkr" firstAttribute="top" secondItem="Tdc-23-DzG" secondAttribute="bottom" id="VBJ-ny-vBL"/>
+                            <constraint firstItem="qZR-xv-xkr" firstAttribute="top" secondItem="Tdc-23-DzG" secondAttribute="bottom" constant="1" id="VBJ-ny-vBL"/>
                             <constraint firstItem="q84-KV-kF5" firstAttribute="top" secondItem="10d-Ou-KFj" secondAttribute="top" id="YKy-qG-eRH"/>
                             <constraint firstItem="Qr7-Gy-Vg3" firstAttribute="leading" secondItem="Tdc-23-DzG" secondAttribute="leading" id="YQT-5j-W7v"/>
                             <constraint firstItem="qZR-xv-xkr" firstAttribute="centerX" secondItem="grr-pn-7gb" secondAttribute="centerX" id="YYW-Re-vOX"/>
@@ -222,7 +222,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t1S-ma-ptn">
-                                <rect key="frame" x="339" y="743" width="20" height="20"/>
+                                <rect key="frame" x="339" y="748" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="FnE-np-FOE">
                                         <variation key="heightClass=regular-widthClass=regular" constant="30"/>
@@ -401,7 +401,7 @@
                         <constraints>
                             <constraint firstItem="jcg-la-DaG" firstAttribute="baseline" secondItem="4cb-gw-jm4" secondAttribute="baseline" id="3Zr-Rr-3La"/>
                             <constraint firstItem="NdJ-xC-eGj" firstAttribute="trailing" secondItem="3XI-So-bYW" secondAttribute="trailing" constant="16" id="6VM-Ex-c9z"/>
-                            <constraint firstItem="NdJ-xC-eGj" firstAttribute="bottom" secondItem="t1S-ma-ptn" secondAttribute="bottom" constant="15" id="7WJ-os-J0f" customClass="KeyboardLayoutConstraint" customModule="steeloreel" customModuleProvider="target"/>
+                            <constraint firstItem="NdJ-xC-eGj" firstAttribute="bottom" secondItem="t1S-ma-ptn" secondAttribute="bottom" constant="10" id="7WJ-os-J0f" customClass="KeyboardLayoutConstraint" customModule="steeloreel" customModuleProvider="target"/>
                             <constraint firstItem="NdJ-xC-eGj" firstAttribute="trailing" secondItem="t1S-ma-ptn" secondAttribute="trailing" constant="16" id="99b-sl-RMg"/>
                             <constraint firstItem="jcg-la-DaG" firstAttribute="leading" secondItem="4cb-gw-jm4" secondAttribute="trailing" constant="12" id="D1m-aa-rJ8"/>
                             <constraint firstItem="4cb-gw-jm4" firstAttribute="leading" secondItem="gH7-E9-3G5" secondAttribute="leadingMargin" id="IBw-ij-fye"/>
