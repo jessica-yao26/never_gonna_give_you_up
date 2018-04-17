@@ -24,6 +24,10 @@ class LoginSignUpViewController: UIViewController {
         }
         view.bringSubview(toFront: emailField)
         view.bringSubview(toFront: continueBtn)
+        continueBtn.setButtonOutlineBlack()
+        facebookBtn.setButtonOutlineBlack()
+        googleBtn.setButtonOutlineBlack()
+        emailField.setTextboxOutlineDarkGrey()
 //        let googleImg: UIImage? = UIImage(named:"google-icon")?.withRenderingMode(.alwaysOriginal)
 //        let facebookImg: UIImage? = UIImage(named:"facebook-icon")?.withRenderingMode(.alwaysOriginal)
 

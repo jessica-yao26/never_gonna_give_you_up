@@ -33,10 +33,15 @@ class NameViewController: UIViewController {
         viewIcon.setBackgroundImage(viewIconImage, for: .normal)
         hideIcon.isHidden = true;
         AppUtility.setArrowButtonImages(backButton: backButton, forwardButton: forwardButton)
-        firstNameField.setBottomBorder()
-        lastNameField.setBottomBorder()
-        passwordField.setBottomBorder()
-        usernameField.setBottomBorder()
+//        firstNameField.setBottomBorder()
+//        lastNameField.setBottomBorder()
+//        passwordField.setBottomBorder()
+//        usernameField.setBottomBorder()
+        firstNameField.setTextboxOutlineDarkGrey()
+        lastNameField.setTextboxOutlineDarkGrey()
+        usernameField.setTextboxOutlineDarkGrey()
+        passwordField.setTextboxOutlineDarkGrey()
+        
         if(UserDefaults.standard.string(forKey: "first_name") != nil) {
             firstNameField.text = UserDefaults.standard.string(forKey: "first_name")
         }

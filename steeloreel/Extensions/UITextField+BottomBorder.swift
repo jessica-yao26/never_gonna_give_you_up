@@ -20,4 +20,28 @@ extension UITextField {
         self.layer.shadowOpacity = 1.0
         self.layer.shadowRadius = 0.0
     }
+    func setTextboxOutlineDarkGrey() {
+        self.layer.backgroundColor = UIColor.groupTableViewBackground.cgColor
+        self.layer.borderColor = UIColor.darkGray.cgColor
+        self.layer.borderWidth = 0.5
+        self.layer.cornerRadius = 5;
+    }
+    func setTextboxOutlineDarkGreyExceptBottom() {
+        self.layer.cornerRadius = 5;
+        let borderTop = CALayer()
+        let borderLeft = CALayer()
+        let borderRight = CALayer()
+        borderTop.frame = CGRect(x: 0, y: 0, width: self.frame.size.width, height: 0.5)
+        borderLeft.frame = CGRect(x:0, y:0, width: 0.5, height: self.frame.size.height)
+        borderRight.frame = CGRect(x:self.frame.size.width - 0.5, y: 0, width: 0.5, height:self.frame.size.height)
+        borderTop.backgroundColor = UIColor.darkGray.cgColor
+        borderLeft.backgroundColor = UIColor.darkGray.cgColor
+        borderRight.backgroundColor = UIColor.darkGray.cgColor
+        
+        self.layer.backgroundColor = UIColor.groupTableViewBackground.cgColor
+        
+        self.layer.addSublayer(borderTop)
+        self.layer.addSublayer(borderLeft)
+        self.layer.addSublayer(borderRight)
+    }
 }
