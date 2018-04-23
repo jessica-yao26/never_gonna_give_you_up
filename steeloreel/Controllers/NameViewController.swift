@@ -81,20 +81,7 @@ class NameViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    // Name validators
-    func isValidNameString(testStr:String) -> Bool {
-        let nameStringRegEx = "[A-Za-z'’.-]{1,64}"
-        let nameStringTest = NSPredicate(format:"SELF MATCHES %@", nameStringRegEx)
-        
-        return nameStringTest.evaluate(with: testStr)
-    }
-    
-    func isValidUsernameString(testStr:String) -> Bool {
-        let nameStringRegEx = "[A-Za-z0-9._]{1,64}"
-        let nameStringTest = NSPredicate(format:"SELF MATCHES %@", nameStringRegEx)
-        
-        return nameStringTest.evaluate(with: testStr)
-    }
+    // validators
     func isNameFieldValid(first_name: String, last_name: String, username: String) -> Bool {
         if((firstNameField.text?.isEmpty)!) {
             firstNameField.becomeFirstResponder()
@@ -106,7 +93,7 @@ class NameViewController: UIViewController {
             self.showToast(message: "Please enter your last name")
             return false;
         }
-        else if(!isValidNameString(testStr: first_name) || !isValidNameString(testStr: last_name) ){
+        else if(!AppUtility.isValid(testStr: first_name, regex: AppUtility.nameRegex) || !AppUtility.isValid(testStr: last_name, regex: AppUtility.nameRegex) ){
             self.showToast(message: "Please enter a valid name")
             return false;
         }
@@ -115,7 +102,7 @@ class NameViewController: UIViewController {
             self.showToast(message: "Please enter a username")
             return false;
         }
-        else if(!isValidUsernameString(testStr: username)) {
+        else if(!AppUtility.isValid(testStr: username, regex: AppUtility.usernameRegex)) {
             self.showToast(message: "Only characters, numbers, underscores, and periods are allowed")
             return false;
         }
@@ -172,10 +159,6 @@ class NameViewController: UIViewController {
 
     }
     func savesFieldsAndMinimizesKeyboard() {
- //       firstNameField.resignFirstResponder()
-   //     lastNameField.resignFirstResponder()
-//        passwordField.resignFirstResponder()
-     //   usernameField.resignFirstResponder()
         UserDefaults.standard.set(self.firstNameField.text?.trimmingCharacters(in: .whitespacesAndNewlines), forKey: "first_name")
         UserDefaults.standard.set(self.lastNameField.text?.trimmingCharacters(in: .whitespacesAndNewlines), forKey: "last_name")
         UserDefaults.standard.set(self.usernameField.text?.trimmingCharacters(in: .whitespacesAndNewlines), forKey: "username")

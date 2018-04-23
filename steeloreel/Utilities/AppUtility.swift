@@ -11,6 +11,10 @@ import UIKit
 
 struct AppUtility {
     
+    static let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+    static let usernameRegex = "[A-Za-z0-9._]{1,64}"
+    static let nameRegex = "[A-Za-z'’.-]{1,64}"
+    
     static func lockOrientation(_ orientation: UIInterfaceOrientationMask) {
         
         if let delegate = UIApplication.shared.delegate as? AppDelegate {
@@ -86,5 +90,11 @@ struct AppUtility {
         UserDefaults.standard.removeObject(forKey: "email")
         UserDefaults.standard.removeObject(forKey: "first_name")
         UserDefaults.standard.removeObject(forKey: "last_name")
+    }
+    
+    static func isValid(testStr: String, regex: String) -> Bool {
+        let test = NSPredicate(format:"SELF MATCHES %@", regex)
+        
+        return test.evaluate(with: testStr)
     }
 }

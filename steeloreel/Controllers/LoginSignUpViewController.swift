@@ -30,29 +30,11 @@ class LoginSignUpViewController: UIViewController {
         emailField.setTextboxOutlineDarkGrey()
     }
     
-    @IBDesignable
-    class LeftAlignedIconButton: UIButton {
-        override func titleRect(forContentRect contentRect: CGRect) -> CGRect {
-            let titleRect = super.titleRect(forContentRect: contentRect)
-            let imageSize = currentImage?.size ?? .zero
-            let availableWidth = contentRect.width - imageEdgeInsets.right - imageSize.width - titleRect.width
-            return titleRect.offsetBy(dx: round(availableWidth / 2), dy: 0)
-        }
-    }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     // Helper functions
-    
-    // Email validators
-    func isValidEmail(testStr:String) -> Bool {
-        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
-        
-        return emailTest.evaluate(with: testStr)
-    }
     
     func isEmailFieldValid(email: String) -> Bool {
         if(email.isEmpty) {
@@ -60,7 +42,7 @@ class LoginSignUpViewController: UIViewController {
             self.showToast(message: "Please enter your email")
             return false;
         }
-        if(!isValidEmail(testStr: email)) {
+        if(!AppUtility.isValid(testStr: email, regex: AppUtility.emailRegex)) {
             self.showToast(message: "Please enter a valid email")
             return false;
         }
