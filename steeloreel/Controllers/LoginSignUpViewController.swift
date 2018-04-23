@@ -28,14 +28,6 @@ class LoginSignUpViewController: UIViewController {
         facebookBtn.setButtonOutlineBlack()
         googleBtn.setButtonOutlineBlack()
         emailField.setTextboxOutlineDarkGrey()
-//        let googleImg: UIImage? = UIImage(named:"google-icon")?.withRenderingMode(.alwaysOriginal)
-//        let facebookImg: UIImage? = UIImage(named:"facebook-icon")?.withRenderingMode(.alwaysOriginal)
-
-//        googleBtn.setImage(googleImg, for: .normal)
-//        facebookBtn.setImage(facebookImg, for: .normal)
-//        googleBtn.moveImageLeftTextCenter()
-//        facebookBtn.moveImageLeftTextCenter()
-//        googleBtn.titleRect(forContentRect: googleBtn.frame)
     }
     
     @IBDesignable

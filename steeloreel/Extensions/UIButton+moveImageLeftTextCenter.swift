@@ -11,7 +11,7 @@ import UIKit
 extension UIButton {
     func setButtonOutlineBlack() {
         self.layer.borderColor = UIColor.black.cgColor
-        self.layer.borderWidth = 1
+        self.layer.borderWidth = 1.2
         self.layer.cornerRadius = 5;
     }
 }

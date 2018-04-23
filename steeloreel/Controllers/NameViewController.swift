@@ -136,6 +136,10 @@ class NameViewController: UIViewController {
         //checkNameFieldAndSendsToNextViewController()
     }
     
+    @IBAction func checkUsernameUnique(_ sender: Any) {
+        
+    }
+    
     @IBAction func lastNameReturnPressed(_ sender: Any) {
         textFieldShouldReturn(textField: lastNameField)
         //savesFieldsAndMinimizesKeyboard()
@@ -162,7 +166,6 @@ class NameViewController: UIViewController {
     }
     
     @IBAction func viewIconTouched(_ sender: Any) {
-        print("viewIcontouched")
         passwordField.isSecureTextEntry = !passwordField.isSecureTextEntry;
         hideIcon.isHidden = !hideIcon.isHidden
         viewIcon.isHidden = !viewIcon.isHidden

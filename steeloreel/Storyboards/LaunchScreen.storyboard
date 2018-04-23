@@ -29,11 +29,11 @@
                                         <variation key="heightClass=regular-widthClass=regular" constant="136"/>
                                     </constraint>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=regular">
-                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="27"/>
+                                    <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="27"/>
                                 </variation>
                             </label>
                         </subviews>
