@@ -120,7 +120,27 @@ class NameViewController: UIViewController {
     }
     
     @IBAction func checkUsernameUnique(_ sender: Any) {
-        
+//        if(isEmailFieldValid(email: email)) {
+        UserLoginSignUpAPI.checkUsername(username: usernameField.text!, completion: { response in
+                let statusCode = response
+                DispatchQueue.main.async {
+                    if(statusCode == 404) {
+//                        UserDefaults.standard.set(email, forKey: "email")
+//                        let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "NameViewController") as! NameViewController
+//                        AppUtility.SegueFromRightViewControllerHelper(sourceViewController: self, destinationViewController: nextViewController)
+                    }
+                    else if(statusCode == 200) {
+                        self.showToast(message: "A user with that username already exists")
+//                        UserDefaults.standard.set(email, forKey: "email")
+//                        let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "EnterPasswordViewController") as! EnterPasswordViewController
+//                        AppUtility.SegueFromRightViewControllerHelper(sourceViewController: self, destinationViewController: nextViewController)
+                    }
+                    else {
+                        self.showToast(message: "Sorry, something went wrong")
+                    }
+                }
+            })
+//        }
     }
     
     @IBAction func lastNameReturnPressed(_ sender: Any) {

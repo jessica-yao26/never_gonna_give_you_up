@@ -10,6 +10,7 @@ import Foundation
 
 enum Method: String {
     case checkUserEmailExists = "/user-lookup-email/"
+    case checkUsernameExists = "/user-lookup-username/"
     case createNewUser = "/users/"
     case loginUser = "/login/"
 }
@@ -48,6 +49,10 @@ struct StyloURL {
     
     static func checkEmailURL(email: String) -> URL {
         return styloURL(method: .checkUserEmailExists, parameters: ["email": email])
+    }
+    
+    static func checkUsernameURL(username: String) -> URL {
+        return styloURL(method: .checkUsernameExists, parameters: ["username": username])
     }
     
     static func createNewUser() -> URL {
