@@ -18,7 +18,6 @@ class ChooseUsernameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         AppUtility.setArrowButtonImages(backButton: backButton, forwardButton: forwardButton)
-//        usernameField.setBottomBorder()
         if(UserDefaults.standard.string(forKey: "username") != nil) {
             usernameField.text = UserDefaults.standard.string(forKey: "username")
         }

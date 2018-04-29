@@ -39,6 +39,29 @@ class EnterPasswordViewController: UIViewController {
         viewIcon.isHidden = !viewIcon.isHidden
         
     }
+    @IBAction func nextButtonPressed(_ sender: Any) {
+//        if(isEmailFieldValid(email: email)) {
+        UserLoginSignUpAPI.loginUser(username: UserDefaults.standard.string(forKey: "email")!, password: passwordField.text!, completion: { response in
+                let statusCode = response
+                DispatchQueue.main.async {
+//                    if(statusCode == 404) {
+//                        UserDefaults.standard.set(email, forKey: "email")
+//                        let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "NameViewController") as! NameViewController
+//                        AppUtility.SegueFromRightViewControllerHelper(sourceViewController: self, destinationViewController: nextViewController)
+//                    }
+                        if(statusCode == 200) {
+//                        UserDefaults.standard.set(email, forKey: "email")
+//                        let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "EnterPasswordViewController") as! EnterPasswordViewController
+//                        AppUtility.SegueFromRightViewControllerHelper(sourceViewController: self, destinationViewController: nextViewController)
+                        self.showToast(message: "yay")
+                    }
+                    else {
+                        self.showToast(message: "Sorry, something went wrong")
+                    }
+                }
+            })
+//        }
+    }
     /*
     // MARK: - Navigation
 

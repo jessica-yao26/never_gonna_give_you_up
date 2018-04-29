@@ -61,12 +61,12 @@ class LoginSignUpViewController: UIViewController {
                     if(statusCode == 404) {
                         UserDefaults.standard.set(email, forKey: "email")
                         let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "NameViewController") as! NameViewController
-                        AppUtility.SegueFromLeftViewControllerHelper(sourceViewController: self, destinationViewController: nextViewController)
+                        AppUtility.SegueFromRightViewControllerHelper(sourceViewController: self, destinationViewController: nextViewController)
                     }
                     else if(statusCode == 200) {
                         UserDefaults.standard.set(email, forKey: "email")
                         let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "EnterPasswordViewController") as! EnterPasswordViewController
-                        AppUtility.SegueFromLeftViewControllerHelper(sourceViewController: self, destinationViewController: nextViewController)
+                        AppUtility.SegueFromRightViewControllerHelper(sourceViewController: self, destinationViewController: nextViewController)
                     }
                     else {
                         self.showToast(message: "Sorry, something went wrong")

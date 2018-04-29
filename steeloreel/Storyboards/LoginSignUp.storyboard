@@ -20,8 +20,112 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stylo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wmW-w4-osy">
+                                <rect key="frame" x="173" y="136" width="68" height="68"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="68" id="UVw-1k-YcL">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="136"/>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="68" id="g58-ql-CMU">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="136"/>
+                                    </constraint>
+                                </constraints>
+                                <viewLayoutGuide key="safeArea" id="Qod-PZ-GK8"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="27"/>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qr7-Gy-Vg3">
+                                <rect key="frame" x="16" y="643" width="382" height="50"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Rt8-2h-mvB">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="75"/>
+                                    </constraint>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="17"/>
+                                <state key="normal" title="Continue with Facebook">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="30"/>
+                                </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q84-KV-kF5">
+                                <rect key="frame" x="16" y="585" width="382" height="50"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="hBk-T4-aU8">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="75"/>
+                                    </constraint>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="17"/>
+                                <state key="normal" title="Continue with Google">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="30"/>
+                                </variation>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="google-icon" translatesAutoresizingMaskIntoConstraints="NO" id="10d-Ou-KFj">
+                                <rect key="frame" x="16" y="585" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="10d-Ou-KFj" secondAttribute="height" multiplier="1:1" id="Dzg-Ib-MuN"/>
+                                    <constraint firstAttribute="width" constant="50" id="F8h-HZ-YqY">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="75"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" secondItem="10d-Ou-KFj" secondAttribute="height" multiplier="1:1" id="eMa-VC-6VB"/>
+                                    <constraint firstAttribute="height" constant="50" id="zeE-Gh-3Ac">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="75"/>
+                                    </constraint>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="facebook-icon" translatesAutoresizingMaskIntoConstraints="NO" id="4fu-OO-MWj">
+                                <rect key="frame" x="16" y="643" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="1tK-bc-6Zc">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="75"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="50" id="FXW-8M-raU">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="75"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" secondItem="4fu-OO-MWj" secondAttribute="height" multiplier="1:1" id="rGk-Ok-kKj"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email address" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tdc-23-DzG">
+                                <rect key="frame" x="16" y="461" width="382" height="40"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Grg-qp-72l">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="80"/>
+                                    </constraint>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" textContentType="email"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="27"/>
+                                </variation>
+                                <connections>
+                                    <action selector="returnKeyPressed:" destination="NGn-jW-Kn2" eventType="primaryActionTriggered" id="u7o-uF-Sqg"/>
+                                </connections>
+                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qZR-xv-xkr">
-                                <rect key="frame" x="16" y="548" width="382" height="40"/>
+                                <rect key="frame" x="16" y="499" width="382" height="40"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Y6Y-iv-mkr">
@@ -44,110 +148,6 @@
                                     <action selector="continueButtonPressed:" destination="NGn-jW-Kn2" eventType="touchUpInside" id="HMB-ct-8xm"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stylo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wmW-w4-osy">
-                                <rect key="frame" x="173" y="136" width="68" height="68"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="68" id="UVw-1k-YcL">
-                                        <variation key="heightClass=regular-widthClass=regular" constant="136"/>
-                                    </constraint>
-                                    <constraint firstAttribute="height" constant="68" id="g58-ql-CMU">
-                                        <variation key="heightClass=regular-widthClass=regular" constant="136"/>
-                                    </constraint>
-                                </constraints>
-                                <viewLayoutGuide key="safeArea" id="Qod-PZ-GK8"/>
-                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=regular">
-                                    <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="27"/>
-                                </variation>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qr7-Gy-Vg3">
-                                <rect key="frame" x="16" y="670" width="382" height="50"/>
-                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="Rt8-2h-mvB">
-                                        <variation key="heightClass=regular-widthClass=regular" constant="75"/>
-                                    </constraint>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="17"/>
-                                <state key="normal" title="Continue with Facebook">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <variation key="heightClass=regular-widthClass=regular">
-                                    <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="30"/>
-                                </variation>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q84-KV-kF5">
-                                <rect key="frame" x="16" y="612" width="382" height="50"/>
-                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="hBk-T4-aU8">
-                                        <variation key="heightClass=regular-widthClass=regular" constant="75"/>
-                                    </constraint>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="17"/>
-                                <state key="normal" title="Continue with Google">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <variation key="heightClass=regular-widthClass=regular">
-                                    <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="30"/>
-                                </variation>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="google-icon" translatesAutoresizingMaskIntoConstraints="NO" id="10d-Ou-KFj">
-                                <rect key="frame" x="16" y="612" width="50" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="10d-Ou-KFj" secondAttribute="height" multiplier="1:1" id="Dzg-Ib-MuN"/>
-                                    <constraint firstAttribute="width" constant="50" id="F8h-HZ-YqY">
-                                        <variation key="heightClass=regular-widthClass=regular" constant="75"/>
-                                    </constraint>
-                                    <constraint firstAttribute="width" secondItem="10d-Ou-KFj" secondAttribute="height" multiplier="1:1" id="eMa-VC-6VB"/>
-                                    <constraint firstAttribute="height" constant="50" id="zeE-Gh-3Ac">
-                                        <variation key="heightClass=regular-widthClass=regular" constant="75"/>
-                                    </constraint>
-                                </constraints>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="facebook-icon" translatesAutoresizingMaskIntoConstraints="NO" id="4fu-OO-MWj">
-                                <rect key="frame" x="16" y="670" width="50" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="1tK-bc-6Zc">
-                                        <variation key="heightClass=regular-widthClass=regular" constant="75"/>
-                                    </constraint>
-                                    <constraint firstAttribute="width" constant="50" id="FXW-8M-raU">
-                                        <variation key="heightClass=regular-widthClass=regular" constant="75"/>
-                                    </constraint>
-                                    <constraint firstAttribute="width" secondItem="4fu-OO-MWj" secondAttribute="height" multiplier="1:1" id="rGk-Ok-kKj"/>
-                                </constraints>
-                            </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email address" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tdc-23-DzG">
-                                <rect key="frame" x="16" y="509" width="382" height="40"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="Grg-qp-72l">
-                                        <variation key="heightClass=regular-widthClass=regular" constant="80"/>
-                                    </constraint>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" textContentType="email"/>
-                                <variation key="heightClass=regular-widthClass=regular">
-                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="27"/>
-                                </variation>
-                                <connections>
-                                    <action selector="returnKeyPressed:" destination="NGn-jW-Kn2" eventType="primaryActionTriggered" id="u7o-uF-Sqg"/>
-                                </connections>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -159,7 +159,7 @@
                             <constraint firstItem="FmM-vD-VAU" firstAttribute="trailing" secondItem="Qr7-Gy-Vg3" secondAttribute="trailing" constant="16" id="G3U-TK-EGy"/>
                             <constraint firstItem="q84-KV-kF5" firstAttribute="centerX" secondItem="grr-pn-7gb" secondAttribute="centerX" id="GAA-SZ-DIV"/>
                             <constraint firstItem="Qr7-Gy-Vg3" firstAttribute="leading" secondItem="4fu-OO-MWj" secondAttribute="leading" id="GLo-Mw-nYf"/>
-                            <constraint firstAttribute="bottom" secondItem="Qr7-Gy-Vg3" secondAttribute="bottom" constant="16" id="GjH-R7-IV2" customClass="KeyboardLayoutConstraint" customModule="steeloreel" customModuleProvider="target"/>
+                            <constraint firstAttribute="bottom" secondItem="Qr7-Gy-Vg3" secondAttribute="bottom" constant="43" id="GjH-R7-IV2" customClass="KeyboardLayoutConstraint" customModule="steeloreel" customModuleProvider="target"/>
                             <constraint firstItem="Qr7-Gy-Vg3" firstAttribute="leading" secondItem="FmM-vD-VAU" secondAttribute="leading" constant="16" id="JAH-W8-wtH"/>
                             <constraint firstItem="FmM-vD-VAU" firstAttribute="trailing" secondItem="q84-KV-kF5" secondAttribute="trailing" constant="16" id="LKw-hF-bpe"/>
                             <constraint firstItem="Qr7-Gy-Vg3" firstAttribute="top" secondItem="4fu-OO-MWj" secondAttribute="top" id="Nfn-ph-Hxn"/>
@@ -174,9 +174,9 @@
                             <constraint firstItem="Qr7-Gy-Vg3" firstAttribute="leading" secondItem="Tdc-23-DzG" secondAttribute="leading" id="YQT-5j-W7v"/>
                             <constraint firstItem="qZR-xv-xkr" firstAttribute="centerX" secondItem="grr-pn-7gb" secondAttribute="centerX" id="YYW-Re-vOX"/>
                             <constraint firstItem="q84-KV-kF5" firstAttribute="width" secondItem="Tdc-23-DzG" secondAttribute="width" id="ZKq-dR-gxr"/>
-                            <constraint firstItem="q84-KV-kF5" firstAttribute="top" secondItem="qZR-xv-xkr" secondAttribute="bottom" constant="24" id="ZQw-r1-QXR"/>
+                            <constraint firstItem="q84-KV-kF5" firstAttribute="top" secondItem="qZR-xv-xkr" secondAttribute="bottom" constant="46" id="ZQw-r1-QXR"/>
                             <constraint firstItem="qZR-xv-xkr" firstAttribute="width" secondItem="Tdc-23-DzG" secondAttribute="width" id="beS-Gh-ie2"/>
-                            <constraint firstItem="qZR-xv-xkr" firstAttribute="top" secondItem="Tdc-23-DzG" secondAttribute="bottom" constant="-1" id="e5A-8P-T8j"/>
+                            <constraint firstItem="qZR-xv-xkr" firstAttribute="top" secondItem="Tdc-23-DzG" secondAttribute="bottom" constant="-2" id="e5A-8P-T8j"/>
                             <constraint firstItem="Tdc-23-DzG" firstAttribute="leading" secondItem="qZR-xv-xkr" secondAttribute="leading" id="g2K-eg-6cB"/>
                             <constraint firstItem="qZR-xv-xkr" firstAttribute="width" secondItem="Tdc-23-DzG" secondAttribute="width" id="gM9-FD-FPv"/>
                             <constraint firstItem="qZR-xv-xkr" firstAttribute="leading" secondItem="Tdc-23-DzG" secondAttribute="leading" id="glg-v7-QLV"/>
@@ -218,7 +218,7 @@
                                 </constraints>
                                 <connections>
                                     <action selector="backPressedFromNameScreen:" destination="zfy-JU-2p4" eventType="touchUpInside" id="3o0-XK-0U9"/>
-                                    <segue destination="NGn-jW-Kn2" kind="custom" customClass="SegueFromRight" customModule="steeloreel" customModuleProvider="target" id="UcE-kC-ueu"/>
+                                    <segue destination="NGn-jW-Kn2" kind="custom" customClass="SegueFromLeft" customModule="steeloreel" customModuleProvider="target" id="UcE-kC-ueu"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t1S-ma-ptn">
@@ -542,6 +542,9 @@
                                     <constraint firstAttribute="width" constant="20" id="9O2-r1-elj"/>
                                     <constraint firstAttribute="height" constant="20" id="HvE-vt-TAO"/>
                                 </constraints>
+                                <connections>
+                                    <segue destination="NGn-jW-Kn2" kind="custom" customClass="SegueFromLeft" customModule="steeloreel" customModuleProvider="target" id="JGy-7u-K8D"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z3t-kR-ZWt">
                                 <rect key="frame" x="379" y="706" width="20" height="20"/>
@@ -549,6 +552,9 @@
                                     <constraint firstAttribute="height" constant="20" id="0lb-iA-UcQ"/>
                                     <constraint firstAttribute="width" constant="20" id="WlZ-BN-chn"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="nextButtonPressed:" destination="Wmj-TT-Zdt" eventType="touchUpInside" id="Fp2-h1-DBW"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Uh-gO-6OO">
                                 <rect key="frame" x="48" y="31" width="249" height="29"/>
@@ -632,7 +638,7 @@
                         <outlet property="backButton" destination="QK2-7V-eQF" id="qjv-gh-Wz1"/>
                         <outlet property="forwardButton" destination="z3t-kR-ZWt" id="363-My-nfm"/>
                         <outlet property="hideIcon" destination="xeS-Lc-P4F" id="QTd-QH-4aY"/>
-                        <outlet property="passwordField" destination="POG-nm-hHd" id="Mge-t5-kcE"/>
+                        <outlet property="passwordField" destination="POG-nm-hHd" id="Paa-QM-2sd"/>
                         <outlet property="viewIcon" destination="V1a-z5-BYW" id="6Z6-SM-tbb"/>
                     </connections>
                 </viewController>
@@ -645,4 +651,7 @@
         <image name="facebook-icon" width="512" height="512"/>
         <image name="google-icon" width="512" height="512"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="JGy-7u-K8D"/>
+    </inferredMetricsTieBreakers>
 </document>

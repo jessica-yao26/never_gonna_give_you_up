@@ -14,6 +14,8 @@ struct UserLoginSignUpAPI {
         let URL = StyloURL.checkEmailURL(email: email);
         var request = URLRequest(url: URL);
         request.httpMethod = "GET";
+        request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type");
+        print(request)
         let task = URLSession.shared.dataTask(with: request, completionHandler: {
             data, response, error in guard error == nil else {
                 completion(-1)
@@ -35,6 +37,29 @@ struct UserLoginSignUpAPI {
         let jsonData =  try? JSONSerialization.data(withJSONObject: json);
         request.httpBody = jsonData;
         request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type");
+        print(request)
+        let task = URLSession.shared.dataTask(with: request, completionHandler: {
+            data, response, error in guard error == nil else {
+                completion(-1)
+                return
+            }
+            if let httpStatus = response as? HTTPURLResponse {
+                completion(httpStatus.statusCode)
+            }
+            return
+        })
+        task.resume()
+    }
+    
+    static func loginUser(username: String, password: String, completion : @escaping (Int) -> Void) {
+        let URL = StyloURL.loginUser(username: username, password: password);
+        var request = URLRequest(url: URL);
+        request.httpMethod = "POST";
+        let json = ["username": username, "password": password];
+        let jsonData =  try? JSONSerialization.data(withJSONObject: json);
+        request.httpBody = jsonData;
+        request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type");
+        print(request)
         let task = URLSession.shared.dataTask(with: request, completionHandler: {
             data, response, error in guard error == nil else {
                 completion(-1)
