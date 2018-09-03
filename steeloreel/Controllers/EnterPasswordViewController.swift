@@ -15,7 +15,9 @@ class EnterPasswordViewController: UIViewController {
     
     @IBOutlet weak var viewIcon: UIButton!
     @IBOutlet weak var hideIcon: UIButton!
+    
     @IBOutlet weak var passwordField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         AppUtility.setArrowButtonImages(backButton: backButton, forwardButton: forwardButton)

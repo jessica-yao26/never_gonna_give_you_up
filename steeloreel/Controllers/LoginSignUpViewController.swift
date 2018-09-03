@@ -16,6 +16,10 @@ class LoginSignUpViewController: UIViewController {
     @IBOutlet weak var facebookBtn: UIButton!
     @IBOutlet weak var continueBtn: UIButton!
     
+    var responseTemp: Dictionary<String, String>?
+    var passedResponseDictionary: Dictionary<String, String>?
+    var passedEmail : String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         AppUtility.setupLandingView(view: self.view)
@@ -28,12 +32,16 @@ class LoginSignUpViewController: UIViewController {
         facebookBtn.setButtonOutlineBlack()
         googleBtn.setButtonOutlineBlack()
         emailField.setTextboxOutlineDarkGrey()
+        if(passedResponseDictionary?["email"] != nil) {
+            emailField.text = passedResponseDictionary?["email"]
+        }
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     // Helper functions
     
     func isEmailFieldValid(email: String) -> Bool {
@@ -59,13 +67,31 @@ class LoginSignUpViewController: UIViewController {
                 let statusCode = response
                 DispatchQueue.main.async {
                     if(statusCode == 404) {
+                        print("inside outer 404")
                         UserDefaults.standard.set(email, forKey: "email")
                         let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "NameViewController") as! NameViewController
+                        let chooseUsernameViewController = self.storyboard?.instantiateViewController(withIdentifier: "ChooseUsernameViewController") as! ChooseUsernameViewController
+                        var token = self.emailField.text!.trimmingCharacters(in: .whitespacesAndNewlines).components(separatedBy: "@")
+                        let username = token[0]
+                        UserLoginSignUpAPI.checkUsername(username: username, completion: { response in
+                            let statusCode = response
+                            print("inside checkUsername call")
+                                if(statusCode == 404) {
+                                    print("inside 404")
+                                    chooseUsernameViewController.usernameUnique = true
+                                    print("This is what the username check api call returns")
+                                }
+                                else {
+                                    print("inside else")
+                                    chooseUsernameViewController.usernameUnique = false
+                            }
+                        })
                         AppUtility.SegueFromRightViewControllerHelper(sourceViewController: self, destinationViewController: nextViewController)
                     }
                     else if(statusCode == 200) {
                         UserDefaults.standard.set(email, forKey: "email")
                         let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "EnterPasswordViewController") as! EnterPasswordViewController
+
                         AppUtility.SegueFromRightViewControllerHelper(sourceViewController: self, destinationViewController: nextViewController)
                     }
                     else {
@@ -75,7 +101,6 @@ class LoginSignUpViewController: UIViewController {
             })
         }
     }
-    
     // Actions
     
     @IBAction func continueButtonPressed(_ sender: Any) {

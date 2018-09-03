@@ -28,6 +28,7 @@
 		4D3D24F4206C96DA00003275 /* AppUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3D24F3206C96DA00003275 /* AppUtility.swift */; };
 		4D3D24FE206CAAA800003275 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D3D24FD206CAAA800003275 /* LaunchScreen.storyboard */; };
 		4D3D25002070922900003275 /* KeyboardLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3D24FF2070922900003275 /* KeyboardLayoutConstraint.swift */; };
+		4DDC703920BCFFBE0019096E /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDC703820BCFFBE0019096E /* KeychainService.swift */; };
 		4DF8A2D12071659C00F44A09 /* UIViewController+Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF8A2D02071659C00F44A09 /* UIViewController+Toast.swift */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +77,7 @@
 		4D3D24F3206C96DA00003275 /* AppUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUtility.swift; sourceTree = "<group>"; };
 		4D3D24FD206CAAA800003275 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D3D24FF2070922900003275 /* KeyboardLayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardLayoutConstraint.swift; sourceTree = "<group>"; };
+		4DDC703820BCFFBE0019096E /* KeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
 		4DF8A2D02071659C00F44A09 /* UIViewController+Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Toast.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -183,6 +185,7 @@
 				4D3D24F3206C96DA00003275 /* AppUtility.swift */,
 				4D104D2A207C54CF0057D308 /* SegueFromLeft.swift */,
 				4D104D2C207C558E0057D308 /* SegueFromRight.swift */,
+				4DDC703820BCFFBE0019096E /* KeychainService.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -347,6 +350,7 @@
 			files = (
 				4D3D24ED206B4CC300003275 /* LoginSignUpViewController.swift in Sources */,
 				4D07F3A420851D8F004D04E6 /* UIButton+moveImageLeftTextCenter.swift in Sources */,
+				4DDC703920BCFFBE0019096E /* KeychainService.swift in Sources */,
 				4D3D24C1206AFAC100003275 /* SecondViewController.swift in Sources */,
 				4D3D24F4206C96DA00003275 /* AppUtility.swift in Sources */,
 				4D104D2B207C54CF0057D308 /* SegueFromLeft.swift in Sources */,

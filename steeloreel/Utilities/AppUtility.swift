@@ -90,6 +90,9 @@ struct AppUtility {
         UserDefaults.standard.removeObject(forKey: "email")
         UserDefaults.standard.removeObject(forKey: "first_name")
         UserDefaults.standard.removeObject(forKey: "last_name")
+        UserDefaults.standard.removeObject(forKey: "password")
+        UserDefaults.standard.removeObject(forKey: "username")
+        UserDefaults.standard.removeObject(forKey: "usernameUnique")
     }
     
     static func isValid(testStr: String, regex: String) -> Bool {
