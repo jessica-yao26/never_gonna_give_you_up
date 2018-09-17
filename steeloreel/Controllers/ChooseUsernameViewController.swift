@@ -14,10 +14,16 @@ class ChooseUsernameViewController: UIViewController {
     @IBOutlet weak var forwardButton: UIButton!
     @IBOutlet weak var usernameField: UITextField!
     
+    var loginSession: LoginSession?
+    
     var usernameUnique : Bool?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("I've entered choose username view controller")
+        print("THIS IS USERNAME UNIQUE")
+        print(self.loginSession)
+//        if(usernameUnique)!
         AppUtility.setArrowButtonImages(backButton: backButton, forwardButton: forwardButton)
         usernameField.setTextboxOutlineDarkGrey()
         if(UserDefaults.standard.string(forKey: "username") != nil) {

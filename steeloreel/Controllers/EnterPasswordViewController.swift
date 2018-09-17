@@ -18,8 +18,12 @@ class EnterPasswordViewController: UIViewController {
     
     @IBOutlet weak var passwordField: UITextField!
     
+    var loginSession: LoginSession?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("THIS IS UU FROM LOGIN SESSION")
+        print(loginSession?.usernameUnique)
         AppUtility.setArrowButtonImages(backButton: backButton, forwardButton: forwardButton)
         let hideIconImage = UIImage(named: "view")
         let viewIconImage = UIImage(named: "hide")
@@ -28,6 +32,20 @@ class EnterPasswordViewController: UIViewController {
         hideIcon.isHidden = true;
         passwordField.setTextboxOutlineDarkGrey()
         // Do any additional setup after loading the view.
+    }
+    
+    func set(username: String) {
+//        loginSession?.username = username
+//        loginSession?.username = self.usernameField.text
+        goToNext()
+    }    
+//    @IBAction func didTapNext() {
+//
+//    }
+    
+    func goToNext() {
+//        let nextViewController = LoginViewController()
+//        nextViewController.loginSession = loginSession
     }
 
     override func didReceiveMemoryWarning() {
@@ -63,6 +81,9 @@ class EnterPasswordViewController: UIViewController {
                 }
             })
 //        }
+        loginSession = LoginSession(email: loginSession?.email, username: nil, password: nil, usernameUnique: loginSession?.usernameUnique)
+        let nextViewController = NameViewController()
+        nextViewController.loginSession = loginSession
     }
     /*
     // MARK: - Navigation

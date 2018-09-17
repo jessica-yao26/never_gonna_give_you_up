@@ -21,11 +21,29 @@ class NameViewController: UIViewController {
 
     @IBOutlet weak var passwordField: UITextField!
     
+    var username: String?
+    var usernameUnique: Bool?
+    var loginSession: LoginSession?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("inside view did load")
-        print("this is username unique")
-        view.bringSubview(toFront: forwardButton)
+        print("this is email")
+        print(self.loginSession?.email)
+        var token = self.loginSession?.email!.trimmingCharacters(in: .whitespacesAndNewlines).components(separatedBy: "@")
+        username = token?[0]
+        self.loginSession?.username = username
+        print("this is username")
+        print(username)
+        checkUsernameUnique(username: username) { (usernameUnique) -> Void in
+            if let usernameUnique = usernameUnique {
+                DispatchQueue.main.async {
+                    self.loginSession?.usernameUnique = usernameUnique
+                }
+            }
+            
+        }
+//        print(self.loginSession?.usernameUnique)
+        view?.bringSubview(toFront: forwardButton)
         let hideIconImage = UIImage(named: "view")
         let viewIconImage = UIImage(named: "hide")
         hideIcon.setBackgroundImage(hideIconImage, for: .normal)
@@ -49,6 +67,25 @@ class NameViewController: UIViewController {
         }
     }
     
+    func checkUsernameUnique(username: String?, handler:@escaping (_ usernameUnique:Bool?) -> Void) {
+        UserLoginSignUpAPI.checkUsername(username: username!, completion: { response in
+            print("DOES ANYTHING ENTER HERE")
+            let statusCode = response
+            DispatchQueue.main.async {
+                if(statusCode == 404) {
+                    print("404")
+                    handler(true)
+                    
+                }
+                else if(statusCode == 200){
+                    handler(false)
+                }
+                else{
+                    print("something went wrong")
+                }
+            }
+        })
+    }
     func textFieldShouldReturn(textField: UITextField) {
 //        textField.resignFirstResponder()
         if (textField == firstNameField) {
@@ -136,8 +173,21 @@ class NameViewController: UIViewController {
     func checkNameFieldAndSendsToNextViewController() {
         if(isNameFieldValid(first_name: (self.firstNameField.text?.trimmingCharacters(in: .whitespacesAndNewlines))!, last_name: (self.lastNameField.text?.trimmingCharacters(in: .whitespacesAndNewlines))!)){
                                     let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "ChooseUsernameViewController") as! ChooseUsernameViewController
+            nextViewController.loginSession = loginSession
             AppUtility.SegueFromRightViewControllerHelper(sourceViewController: self, destinationViewController: nextViewController)
     }
+//        loginSession = LoginSession(email: loginSession?.email, username: nil, password: nil, usernameUnique: loginSession?.usernameUnique)
+//        let nextViewController = ChooseUsernameViewController()
+//        nextViewController.loginSession = loginSession
+        
+//        loginSession = LoginSession(email: self.loginSession?.email, username: self.username, password: nil, usernameUnique: self.usernameUnique)
+//        let nextViewController = ChooseUsernameViewController()
+//        print("THIS IS LOGIN SESH FROM NAME VIEW CONTROLLER")
+//        print(self.loginSession)
+//        print(loginSession)
+//        self.loginSession = LoginSession(email: email, username: nil, password: nil, usernameUnique: nil)
+//        nextViewController.loginSession = loginSession
+//        self.navigationController?.pushViewController(nextViewController, animated: true)
 }
 }
     /*
