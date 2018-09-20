@@ -20,26 +20,29 @@ class ChooseUsernameViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("I've entered choose username view controller")
-        print("THIS IS USERNAME UNIQUE")
-        print(self.loginSession)
 //        if(usernameUnique)!
         AppUtility.setArrowButtonImages(backButton: backButton, forwardButton: forwardButton)
         usernameField.setTextboxOutlineDarkGrey()
-        if(UserDefaults.standard.string(forKey: "username") != nil) {
-            usernameField.text = UserDefaults.standard.string(forKey: "username")
-        }
-        if(usernameUnique != nil){
-            print("inside username is not nil")
-            if(usernameUnique)! {
-                var token = UserDefaults.standard.string(forKey: "email")?.components(separatedBy: "@")
-                usernameField.text = token?[0]
+        // some unwind logic
+//        if(UserDefaults.standard.string(forKey: "username") != nil) {
+////            usernameField.text = UserDefaults.standard.string(forKey: "username")
+//
+//        }
+//        else{
+            if(self.loginSession?.usernameUnique != nil){
+                print("inside username is not nil")
+                if(self.loginSession?.usernameUnique)! {
+                    usernameField.text = self.loginSession?.username
+                }
+                else {
+                    usernameField.text = nil
+                }
             }
-        }
-        else{
-            print("inside username is nil")
-            usernameField.text = nil
-        }
+            else{
+                print("inside username is nil")
+                usernameField.text = nil
+            }
+//        }
         // Do any additional setup after loading the view.
     }
     

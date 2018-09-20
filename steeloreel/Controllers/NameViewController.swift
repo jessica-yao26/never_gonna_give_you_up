@@ -69,7 +69,6 @@ class NameViewController: UIViewController {
     
     func checkUsernameUnique(username: String?, handler:@escaping (_ usernameUnique:Bool?) -> Void) {
         UserLoginSignUpAPI.checkUsername(username: username!, completion: { response in
-            print("DOES ANYTHING ENTER HERE")
             let statusCode = response
             DispatchQueue.main.async {
                 if(statusCode == 404) {
@@ -175,20 +174,8 @@ class NameViewController: UIViewController {
                                     let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "ChooseUsernameViewController") as! ChooseUsernameViewController
             nextViewController.loginSession = loginSession
             AppUtility.SegueFromRightViewControllerHelper(sourceViewController: self, destinationViewController: nextViewController)
+        }
     }
-//        loginSession = LoginSession(email: loginSession?.email, username: nil, password: nil, usernameUnique: loginSession?.usernameUnique)
-//        let nextViewController = ChooseUsernameViewController()
-//        nextViewController.loginSession = loginSession
-        
-//        loginSession = LoginSession(email: self.loginSession?.email, username: self.username, password: nil, usernameUnique: self.usernameUnique)
-//        let nextViewController = ChooseUsernameViewController()
-//        print("THIS IS LOGIN SESH FROM NAME VIEW CONTROLLER")
-//        print(self.loginSession)
-//        print(loginSession)
-//        self.loginSession = LoginSession(email: email, username: nil, password: nil, usernameUnique: nil)
-//        nextViewController.loginSession = loginSession
-//        self.navigationController?.pushViewController(nextViewController, animated: true)
-}
 }
     /*
     // MARK: - Navigation

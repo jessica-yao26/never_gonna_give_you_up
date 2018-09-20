@@ -17,8 +17,8 @@ struct LoginSession {
 }
 class LoginSignUpViewController: UIViewController {
     
-    var nextViewController: UIViewController?
     var loginSession: LoginSession?
+    var nextViewController: UIViewController?
 
     @IBOutlet weak var emailField: UITextField!
     
@@ -26,14 +26,10 @@ class LoginSignUpViewController: UIViewController {
     @IBOutlet weak var facebookBtn: UIButton!
     @IBOutlet weak var continueBtn: UIButton!
     
-    var responseTemp: Dictionary<String, String>?
-    var passedResponseDictionary: Dictionary<String, String>?
-    var passedEmail: String?
-//    var nextViewController: UIViewController?
-    // if there's a question mark it can be nil and doesn't need more info before initializing the set
-//    var chooseUsernameViewController: ChooseUsernameViewController?
-    // when it inits the vc, it wants properties values, but it doesn't have self
-
+//    will need unwind segue
+//    var responseTemp: Dictionary<String, String>?
+//    var passedResponseDictionary: Dictionary<String, String>?
+//    var passedEmail: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,19 +43,11 @@ class LoginSignUpViewController: UIViewController {
         facebookBtn.setButtonOutlineBlack()
         googleBtn.setButtonOutlineBlack()
         emailField.setTextboxOutlineDarkGrey()
-        if(passedResponseDictionary?["email"] != nil) {
-            emailField.text = passedResponseDictionary?["email"]
-        }
-//        chooseUsernameViewController = self.storyboard?.instantiateViewController(withIdentifier: "ChooseUsernameViewController") as! ChooseUsernameViewController
+//        if(passedResponseDictionary?["email"] != nil) {
+//            emailField.text = passedResponseDictionary?["email"]
+//        }
     }
     
-    func set(email: String) {
-    }
-    
-//    func goToNext() {
-//        let nextViewController = EnterPasswordViewController()
-//        nextViewController.loginSession = loginSession
-//    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -97,89 +85,30 @@ class LoginSignUpViewController: UIViewController {
                 }
                 AppUtility.SegueFromRightViewControllerHelper(sourceViewController: self, destinationViewController: nextViewController!)
             }
-            print("finished the check")
-            print("this is test bool")
-            print(self.loginSession?.usernameUnique)
-//            loginSession = LoginSession(email: email, username: nil, password: nil, usernameUnique: nil)
-//            let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "NameViewController") as! NameViewController
-//            nextViewController.loginSession = loginSession
-//            chooseUsernameViewController = self.storyboard?.instantiateViewController(withIdentifier: "NameViewController") as! NameViewController
-//            self.present(nextViewController, animated: true, completion: nil)
-//            AppUtility.SegueFromRightViewControllerHelper(sourceViewController: self, destinationViewController: nextViewController)
-//            self.navigationController?.pushViewController(nextViewController, animated: true)
         }
-        print("THIS IS outside the look")
-//        self.loginSession = LoginSession(email: email, username: nil, password: nil, usernameUnique: nil)
-//        let nextViewController = NameViewController()
-//        nextViewController.loginSession = self.loginSession
-////                                AppUtility.SegueFromRightViewControllerHelper(sourceViewController: self, destinationViewController: nextViewController)
-//
-//        self.navigationController?.pushViewController(nextViewController, animated: true)
-//        print(email)
-//        loginSession = LoginSession(email: email, username: nil, password: nil, usernameUnique: nil)
-//        let nextViewController = NameViewController()
-//        nextViewController.loginSession = loginSession
-//        AppUtility.SegueFromRightViewControllerHelper(sourceViewController: self, destinationViewController: nextViewController)
-
-//        self.navigationController?.pushViewController(nextViewController, animated: true)
     }
     
     func completeEmailRegisteredCheck(email: String, handler:@escaping (_ nextViewController: UIViewController?) -> Void) {
         UserLoginSignUpAPI.checkEmail(email: email, completion: { response in
             let statusCode = response
-                            DispatchQueue.main.async {
-            if(statusCode == 404) {
-                print("inside outer 404")
-                UserDefaults.standard.set(email, forKey: "email")
-                let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "NameViewController") as! NameViewController
-                self.loginSession = LoginSession(email: email, username: nil, password: nil, usernameUnique: nil)
-                nextViewController.loginSession = self.loginSession
-                handler(nextViewController)
-//                            AppUtility.SegueFromRightViewControllerHelper(sourceViewController: self, destinationViewController: nextViewController)
-//                let nextViewController = NameViewController()
-//                nextViewController.loginSession = self.loginSession
-                // self navigation controller is null
-//                self.navigationController!.pushViewController(nextViewController, animated: true)
-//                AppUtility.SegueFromRightViewControllerHelper(sourceViewController: self, destinationViewController: nextViewController)
-                //                        let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "NameViewController") as! NameViewController
-//                self.loginSession?.usernameUnique = true
-                //                        self.loginSession = LoginSession(email: email, username: nil, password: nil, usernameUnique: nil)
-                //                        let nextViewController = NameViewController()
-                //                        nextViewController.loginSession = self.loginSession
-                //                        self.navigationController?.pushViewController(nextViewController, animated: true)
-                //                        let chooseUsernameViewController = self.storyboard?.instantiateViewController(withIdentifier: "ChooseUsernameViewController") as! ChooseUsernameViewController
-                //
-                //
-                //                        var token = self.emailField.text!.trimmingCharacters(in: .whitespacesAndNewlines).components(separatedBy: "@")
-                //                        let username = token[0]
-                //                        UserLoginSignUpAPI.checkUsername(username: username, completion: { response in
-                //                            let statusCode = response
-                //                            print("inside checkUsername call")
-                //                                if(statusCode == 404) {
-                //                                    print("inside 404")
-                //                                    print("I've the if statement where usernameunique is set")
-                ////                                    self.chooseUsernameViewController?.usernameUnique = true
-                //                                    self.loginSession?.usernameUnique = true
-                //                                }
-                //                                else {
-                //                                    print("inside else")
-                ////                                    self.chooseUsernameViewController?.usernameUnique = false
-                //                                    self.loginSession?.usernameUnique = true
-                //                            }
-                //                        })
-                //                        AppUtility.SegueFromRightViewControllerHelper(sourceViewController: self, destinationViewController: nextViewController)
+            DispatchQueue.main.async {
+                if(statusCode == 404) {
+                    let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "NameViewController") as! NameViewController
+                    self.loginSession = LoginSession(email: email, username: nil, password: nil, usernameUnique: nil)
+                    nextViewController.loginSession = self.loginSession
+                    handler(nextViewController)
+
+                }
+                else if(statusCode == 200) {
+                    let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "EnterPasswordViewController") as! EnterPasswordViewController
+                    self.loginSession = LoginSession(email: email, username: nil, password: nil, usernameUnique: nil)
+                    nextViewController.loginSession = self.loginSession
+                    handler(nextViewController)
+                }
+                else {
+                    self.showToast(message: "Sorry, something went wrong")
+                }
             }
-            else if(statusCode == 200) {
-                UserDefaults.standard.set(email, forKey: "email")
-                //                        let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "EnterPasswordViewController") as! EnterPasswordViewController
-                
-                //                        AppUtility.SegueFromRightViewControllerHelper(sourceViewController: self, destinationViewController: nextViewController)
-            }
-            else {
-                self.showToast(message: "Sorry, something went wrong")
-            }
-                            }
-            
         })
     }
     // Actions
